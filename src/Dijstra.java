@@ -28,18 +28,17 @@ public class Dijstra {
         Vertice atual = new Vertice();
 
         // Variavel que marca o vizinho do vertice atualmente visitado
-        Vertice vizinho = new Vertice();
+        Vertice[] vizinho;
 
         // Lista dos vertices que ainda nao foram visitados
         List<Vertice> naoVisitados = new ArrayList<Vertice>();
         // Adiciona a origem na lista do menor caminho
-        menorCaminho.add(v1);
-
+        
         // Colocando a distancias iniciais
         for (int i = 0; i < grafo.getVertices().size(); i++) {
 
             // Vertice atual tem distancia zero, e todos os outros,
-            // 9999("infinita")
+            // 9999999("infinita")
             if (grafo.getVertices().get(i).getDescricao()
                     .equals(v1.getDescricao())) {
 
@@ -71,23 +70,25 @@ public class Dijstra {
              * correspondente. Se essa distancia for menor que a distancia do
              * vizinho, esta eh atualizada.
              */
-            for (int i = 0; i < atual.getArestas().size(); i++) {
-
-                vizinho = atual.getArestas().get(i).getDestino();
-
-                if (!vizinho.verificarVisita()) {
+            for (int i = 0; i < atual.getGrau(); i++) {
+                Set<Vertice> chaveSet = atual.vizinhos.keySet();
+                vizinho=null;
+                vizinho = chaveSet.toArray(new Vertice[0]);
+                for (int j = 0; j < vizinho.length; j++) {
+                    
+                
+                if (!vizinho[j].verificarVisita()) {
 
                     // Comparando a distância do vizinho com a possível
                     // distância
-                    if (vizinho.getDistancia() > (atual.getDistancia() + atual
-                            .getArestas().get(i).getPeso())) {
+                    if (vizinho[j].getDistancia() > (atual.getDistancia() + atual.getVizinhos(vizinho[j]))) {
 
-                        vizinho.setDistancia(atual.getDistancia()
-                                + atual.getArestas().get(i).getPeso());
-                        vizinho.setPai(atual);
+                        vizinho[j].setDistancia(atual.getDistancia()
+                                + atual.getVizinhos(vizinho[j]));
+                        vizinho[j].setPai(atual);
 
                     }
-                }
+                }}
 
             }
             // Marca o vertice atual como visitado e o retira da lista de nao

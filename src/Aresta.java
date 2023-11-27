@@ -1,4 +1,5 @@
 package src;
+/*
 public class Aresta {
 
     private int peso;
@@ -40,3 +41,4 @@ public class Aresta {
     }
 
 }
+*/

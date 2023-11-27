@@ -11,8 +11,10 @@ public class Grafo {
     }
 
     public void adicionarVertice(Vertice novoVertice) {
-
-        this.grafo.add(novoVertice);
+        if (encontrarVertice(novoVertice.getDescricao()) ==null ) {
+            this.grafo.add(novoVertice);
+            
+        }
     }
 
     public List<Vertice> getVertices() {
