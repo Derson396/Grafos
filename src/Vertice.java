@@ -49,6 +49,8 @@ public class Vertice implements Comparable<Vertice> {
     }
     public void setVizinhos(Vertice vizinho,int peso){
         vizinhos.put(vizinho, peso);
+        vizinho.vizinhos.put(this, peso);
+        vizinho.setGrau(vizinho.getGrau()+1);
         grau++;
     }
     public Integer getVizinhos(Vertice vizinho){

@@ -27,71 +27,71 @@ public class Socorro {
 
 			Map<String, Vertice> mapa = new HashMap<String, Vertice>();
 			contador = 1;
-			//for (int i = 0; i < 1; i++) {
-				while ((linha = br.readLine()) != null/* && contador <= intervalo[i]*/) {
-					contador++;
-					Vertice vit = null;
-					if (linha.contains(",")) {
-						s1.add(linha.split("/"));
-						vertices = s1.get(0)[0].split(",");
+			// for (int i = 0; i < 1; i++) {
+			while ((linha = br.readLine()) != null/* && contador <= intervalo[i] */) {
+				contador++;
+				Vertice vit = null;
+				if (linha.contains(",")) {
+					s1.add(linha.split("/"));
+					vertices = s1.get(0)[0].split(",");
 
-						v = (Vertice) mapa.get(vertices[0]);
-						if (v == null)
-							v = new Vertice();
+					v = (Vertice) mapa.get(vertices[0]);
+					if (v == null)
+						v = new Vertice();
 
-						v.setDescricao(vertices[0]);
-						mapa.put(vertices[0], v);
+					v.setDescricao(vertices[0]);
+					mapa.put(vertices[0], v);
 
-						if (linha.contains("/")) {
+					if (linha.contains("/")) {
 
-							String pesoArestas[] = s1.get(0)[1].split(",");
+						String pesoArestas[] = s1.get(0)[1].split(",");
 
-							vit = mapa.get(vertices[1]);
-							if (vit == null)
-								vit = new Vertice();
-							vit.setDescricao(vertices[1]);
+						vit = mapa.get(vertices[1]);
+						if (vit == null)
+							vit = new Vertice();
+						vit.setDescricao(vertices[1]);
 
-							mapa.put(vertices[1], vit);
+						mapa.put(vertices[1], vit);
 
-							v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
-							v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
-						}
-
+						v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
+						v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
 					}
 
-					// Vertices finais
-					else {
-						v = (Vertice) mapa.get(linha);
-						if (v == null)
-							v = new Vertice();
-						v.setDescricao(linha);
-						mapa.put(linha, v);
+				}
+
+				// Vertices finais
+				else {
+					v = (Vertice) mapa.get(linha);
+					if (v == null)
+						v = new Vertice();
+					v.setDescricao(linha);
+					mapa.put(linha, v);
+				}
+				boolean flag = true;
+				for (int j = 0; j < g.getVertices().size(); j++) {
+					if (g.getVertices().get(j) == vit) {
+						flag = false;
 					}
-					boolean flag = true;
+				}
+				if (flag) {
+					g.adicionarVertice(v);
+				}
+				flag = true;
+				if (vit != null) {
 					for (int j = 0; j < g.getVertices().size(); j++) {
 						if (g.getVertices().get(j) == vit) {
 							flag = false;
 						}
 					}
 					if (flag) {
-						g.adicionarVertice(v);
+						g.adicionarVertice(vit);
 					}
-					flag = true;
-					if (vit != null) {
-						for (int j = 0; j < g.getVertices().size(); j++) {
-							if (g.getVertices().get(j) == vit) {
-								flag = false;
-							}
-						}
-						if (flag) {
-							g.adicionarVertice(vit);
-						}
-					}
-					s1.clear();
 				}
+				s1.clear();
+			}
 
-				// catch do BufferedReader
-			//}
+			// catch do BufferedReader
+			// }
 			br.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Nao encontrou o arquivo");
@@ -105,6 +105,35 @@ public class Socorro {
 		// Retornando os vertices
 		return g.getVertices();
 
+	}
+
+	public static void generator() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			Long timer = System.currentTimeMillis();
+			int n = (int) Math.pow(5, i);
+			File f = new File("src/Grafo" + n + ".txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f));
+			Random aleat = new Random();
+			Grafo h = new Grafo();
+			for (int j = 0; j < n; j++) {
+				Vertice v = new Vertice();
+				v.setDescricao("v" + Integer.toString(j));
+				h.adicionarVertice(v);
+			}
+			Grafo k = h;
+			for (int j = 0; j < n; j++) {
+				Vertice u = k.encontrarVertice("v" + j);
+				for (int j2 = j + 1; j2 < n; j2++) {
+					Vertice w = k.encontrarVertice("v" + j2);
+					u.setVizinhos(w, 1);
+				}
+			}
+			h = Prim.gerarArvore(k);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+
+			
+		}
 	}
 
 	public static void gerador() throws IOException {
@@ -162,13 +191,13 @@ public class Socorro {
 							br.write(h.getVertices().get(j).getDescricao() + "," + x.getDescricao() + "/"
 									+ Integer.toString(ps) + "\n");
 							ps = aleat.nextInt(200);
-							
+
 						}
 					} else {
 						j += 1;
 					}
 				}
-				for (; j < limiteSuperior-1; j++) {
+				for (; j < limiteSuperior - 1; j++) {
 					do {
 						while (u == w) {
 							w = aleat.nextInt(n);
