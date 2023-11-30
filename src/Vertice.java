@@ -7,7 +7,7 @@ public class Vertice implements Comparable<Vertice> {
     private int distancia,grau=0;
     private boolean visitado = false;
     private Vertice pai;
-    public Map<Vertice, Integer> vizinhos = new HashMap<Vertice, Integer>();
+    public Map<String, Integer> vizinhos = new HashMap<String, Integer>();
     
     public void setDescricao(String nome) {
 
@@ -48,13 +48,13 @@ public class Vertice implements Comparable<Vertice> {
         return this.pai;
     }
     public void setVizinhos(Vertice vizinho,int peso){
-        vizinhos.put(vizinho, peso);
-        vizinho.vizinhos.put(this, peso);
+        vizinhos.put(vizinho.getDescricao(), peso);
+        vizinho.vizinhos.put(this.getDescricao(), peso);
         vizinho.setGrau(vizinho.getGrau()+1);
         grau++;
     }
     public Integer getVizinhos(Vertice vizinho){
-        return vizinhos.get(vizinho);
+        return vizinhos.get(vizinho.getDescricao());
     }
 /**
     public void setVizinhos(Vertice vizinho) {
@@ -129,11 +129,11 @@ public class Vertice implements Comparable<Vertice> {
         this.visitado = visitado;
     }
 
-    public Map<Vertice, Integer> getVizinhos() {
+    public Map<String, Integer> getVizinhos() {
         return vizinhos;
     }
 
-    public void setVizinhos(Map<Vertice, Integer> vizinhos) {
+    public void setVizinhos(Map<String, Integer> vizinhos) {
         this.vizinhos = vizinhos;
     }
 }

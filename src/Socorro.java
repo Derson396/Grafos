@@ -10,13 +10,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class Socorro {
-	private static int[] intervalo;
-	private static int contador;
-
-	public static List<Vertice> lerGrafo(String nomeArquivo) {
+	public static List<Vertice> lerGrafo(String nomeArquivo, int limite) {
 
 		Grafo g = new Grafo();
-		Vertice v;
+		Vertice v = null;
 		File f = new File(nomeArquivo);
 		String vertices[];
 		String linha;
@@ -26,9 +23,8 @@ public class Socorro {
 			BufferedReader br = new BufferedReader(new FileReader(f));
 
 			Map<String, Vertice> mapa = new HashMap<String, Vertice>();
-			contador = 1;
-			// for (int i = 0; i < 1; i++) {
-			while ((linha = br.readLine()) != null/* && contador <= intervalo[i] */) {
+			int contador = 0;
+			while ((linha = br.readLine()) != null && limite != contador) {
 				contador++;
 				Vertice vit = null;
 				if (linha.contains(",")) {
@@ -54,39 +50,11 @@ public class Socorro {
 						mapa.put(vertices[1], vit);
 
 						v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
-						v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
 					}
 
 				}
-
-				// Vertices finais
-				else {
-					v = (Vertice) mapa.get(linha);
-					if (v == null)
-						v = new Vertice();
-					v.setDescricao(linha);
-					mapa.put(linha, v);
-				}
-				boolean flag = true;
-				for (int j = 0; j < g.getVertices().size(); j++) {
-					if (g.getVertices().get(j) == vit) {
-						flag = false;
-					}
-				}
-				if (flag) {
-					g.adicionarVertice(v);
-				}
-				flag = true;
-				if (vit != null) {
-					for (int j = 0; j < g.getVertices().size(); j++) {
-						if (g.getVertices().get(j) == vit) {
-							flag = false;
-						}
-					}
-					if (flag) {
-						g.adicionarVertice(vit);
-					}
-				}
+				g.adicionarVertice(vit);
+				g.adicionarVertice(v);
 				s1.clear();
 			}
 
@@ -128,135 +96,134 @@ public class Socorro {
 					u.setVizinhos(w, 1);
 				}
 			}
-			h = Prim.gerarArvore(k);
+			h = arvure(k, n, br);
+			List<Vertice> pegaGrau = h.getVertices();
 			int limiteInferior = n - 1;
 			int limiteSuperior = (n * (n - 1)) / 2;
+			int ale1, ale2;
 
-			
+			for (int j = limiteInferior; j < limiteSuperior;) {
+				int peso = aleat.nextInt(1, 500);
+				ale1 = aleat.nextInt(pegaGrau.size());
+				ale2 = aleat.nextInt(pegaGrau.size());
+				Vertice u = pegaGrau.get(ale1);
+				Vertice w = pegaGrau.get(ale2);
+				while (ale1 == ale2) {
+					ale1 = aleat.nextInt(pegaGrau.size());
+					ale2 = aleat.nextInt(pegaGrau.size());
+					u = pegaGrau.get(ale1);
+					w = pegaGrau.get(ale2);
+				}
+				while (u.vizinhos.get(w.getDescricao()) == null) {
+					u.setVizinhos(w, peso);
+					j++;
+					if (u.getGrau() == n - 1) {
+						pegaGrau.remove(u);
+					}
+					if (w.getGrau() == n - 1) {
+						pegaGrau.remove(w);
+					}
+					br.write(u.getDescricao() + "," + w.getDescricao() + "/" + Integer.toString(peso) + "\n");
+				}
+			}
+			Long tempo = (System.currentTimeMillis() - timer);
+			System.out.println("\tGrafo gerado com vertice: " + n + " em: " + tempo + " ms, " + ((tempo / 1000) % 60)
+					+ " segundos, " + ((tempo / 60000) % 60) + " minutos");
+			br.close();
 		}
 	}
 
-	public static void gerador() throws IOException {
-		for (int i = 1; i <= 5; i++) {
-			Long timer = System.currentTimeMillis();
-			int n = (int) Math.pow(5, i);
-			File f = new File("src/Grafo" + n + ".txt");
-			BufferedWriter br = new BufferedWriter(new FileWriter(f));
-			Random aleat = new Random();
-			Grafo h = new Grafo();
-			for (int j = 0; j < n; j++) {
-				Vertice v = new Vertice();
-				v.setDescricao("v" + Integer.toString(j));
-				h.adicionarVertice(v);
+	private static Grafo arvure(Grafo k, int n, BufferedWriter br) throws IOException {
+
+		Grafo g = new Grafo();
+		List<Vertice> a = k.getVertices();
+		List<Vertice> b = new ArrayList<Vertice>();
+		Random aleat = new Random();
+		int v = aleat.nextInt(a.size()), w = aleat.nextInt(a.size());
+
+		for (; a.size() != 0;) {
+			if (b.size() == 0) {
+				do {
+					v = aleat.nextInt(a.size());
+					w = aleat.nextInt(a.size());
+				} while (v == w);
+				Vertice u = new Vertice();
+				Vertice y = new Vertice();
+				u.setDescricao(a.get(v).getDescricao());
+				y.setDescricao(a.get(w).getDescricao());
+				u.setVizinhos(y, aleat.nextInt(1, 500));
+
+				if (v < w) {
+					b.add(y);
+					a.remove(w);
+					b.add(u);
+					a.remove(v);
+				} else {
+					b.add(u);
+					a.remove(v);
+					b.add(y);
+					a.remove(w);
+				}
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + u.getVizinhos(y).toString() + "\n");
+			} else {
+				w = aleat.nextInt(b.size());
+				v = aleat.nextInt(a.size());
+				Vertice u = new Vertice(), y = new Vertice();
+				u.setDescricao(a.get(v).getDescricao());
+				y = b.get(w);
+				u.setVizinhos(y, aleat.nextInt(1, 500));
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + u.getVizinhos(y).toString() + "\n");
+				b.add(u);
+				a.remove(v);
 			}
-			int limiteInferior = n - 1;
-			int limiteSuperior = (n * (n - 1)) / 2;
 
-			for (int j = 0; j < h.getVertices().size(); j++) {
-				Vertice v, x;
-				int u = aleat.nextInt(n), w = aleat.nextInt(n);
-				while (u == w) {
-					w = aleat.nextInt(n);
-				}
-				int ps = aleat.nextInt(200);
-				while (j < h.getVertices().size()) {
-					boolean flag = true;
-					if (h.getVertices().get(j).getGrau() < 2) {
-
-						for (int k = j + 1; k < h.getVertices().size() && flag; k++) {
-							if (h.getVertices().get(k).getVizinhos().size() < 2
-									&& !(h.getVertices().get(j).vizinhos.containsKey(h.getVertices().get(k)))) {
-								flag = false;
-								v = h.getVertices().get(j);
-								x = h.getVertices().get(k);
-								v.setVizinhos(x, ps);
-								x.setVizinhos(v, ps);
-								br.write(h.getVertices().get(j).getDescricao() + ","
-										+ h.getVertices().get(k).getDescricao()
-										+ "/" + Integer.toString(ps) + "\n");
-								ps = aleat.nextInt(200);
-							}
-						}
-						if (flag) {
-							v = h.getVertices().get(j);
-							do {
-								while (u == w) {
-									w = aleat.nextInt(n);
-								}
-								x = h.getVertices().get(w);
-								w = aleat.nextInt(n);
-							} while ((v.vizinhos.containsKey(x)));
-							v.setVizinhos(x, ps);
-							x.setVizinhos(v, ps);
-							br.write(h.getVertices().get(j).getDescricao() + "," + x.getDescricao() + "/"
-									+ Integer.toString(ps) + "\n");
-							ps = aleat.nextInt(200);
-
-						}
-					} else {
-						j += 1;
-					}
-				}
-				for (; j < limiteSuperior - 1; j++) {
-					do {
-						while (u == w) {
-							w = aleat.nextInt(n);
-						}
-						v = h.getVertices().get(u);
-						x = h.getVertices().get(w);
-						w = aleat.nextInt(n);
-						u = aleat.nextInt(n);
-					} while ((v.vizinhos.containsKey(x)));
-					v.setVizinhos(x, ps);
-					x.setVizinhos(v, ps);
-					br.write(v.getDescricao() + "," + x.getDescricao() + "/"
-							+ Integer.toString(ps) + "\n");
-					ps = aleat.nextInt(200);
-					w = aleat.nextInt(n);
-					u = aleat.nextInt(n);
-					while (u == w) {
-						w = aleat.nextInt(n);
-					}
-				}
-				System.out.println("teste  " + i + "  " + (System.currentTimeMillis() - timer));
-			}
-			br.close();
 		}
-
+		for (int i = 0; i < b.size(); i++) {
+			g.adicionarVertice(b.get(i));
+		}
+		return g;
 	}
 
 	public static void main(String args[]) throws IOException {
 		int input = -1;
 		Scanner a = new Scanner(System.in);
 		while (input != 0) {
+			System.out.print(
+					"\tDigite: 0 : para sair\n"
+							+ "\tDigite: 1 : para gerar o grafo\n"
+							+ "\tDigite: 2 : para rodar o djikstra\n\t");
 			input = a.nextInt();
 			switch (input) {
 				case 1:
 					Long timer = System.currentTimeMillis();
-					gerador();
-					System.out.println(System.currentTimeMillis() - timer);
+					generator();
+					Long tempo=System.currentTimeMillis()-timer;
+					System.out.println("\tTempo total; gasto para gerar em: " + tempo + " ms, " + ((tempo / 1000) % 60)
+							+ " segundos, " + ((tempo / 60000) % 60) + " minutos");
 
 					break;
 				case 2:
 					for (int i = 1; i <= 5; i++) {
-						Grafo g = new Grafo();
 						int n = (int) Math.pow(5, i);
 						int limiteInferior = n - 1;
 						int limiteSuperior = (n * (n - 1)) / 2;
-						intervalo = new int[5];
-						for (int j = 0; j < intervalo.length; j++) {
-							intervalo[j] = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-						}
-						g.setVertices(lerGrafo("src/Grafo" + n + ".txt"));
-						Vertice i1 = new Vertice();
-						i1 = g.encontrarVertice("v0");
-
-						List<Vertice> resultado = new ArrayList<Vertice>();
-						resultado = Dijstra.encontrarMenorCaminhoDijkstra(g, i1);
-						System.out.println("\t Esse é o menor caminho feito pelo algoritmo de dijkstra:");
-						for (int j = 1; j < resultado.size() && i < 3; j++) {
-							System.out.println("Esse e o teste " + n +
-									"\t " + resultado.get(j).getDescricao() + " : " + resultado.get(j).getDistancia());
+						for (int j = 0; j < 5; j++) {
+							Grafo g = new Grafo();
+							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+							Vertice i1 = new Vertice();
+							i1 = g.encontrarVertice("v0");
+							List<Vertice> resultado = new ArrayList<Vertice>();
+							resultado = Dijstra.encontrarMenorCaminhoDijkstra(g, i1,intervalo);
+							/*System.out.println("\t Esse é o menor caminho feito pelo algoritmo de dijkstra:");
+							for (int j2 = 0; j2 < resultado.size(); j2++) {
+								String lala = "";
+								lala = printPai(resultado.get(j2), lala);
+								System.out.println("Esse e o teste " + n +" de "+intervalo+
+										"\t " + lala + " : "
+										+ resultado.get(j2).getDistancia());
+							}
+							*/
 						}
 					}
 
@@ -266,6 +233,15 @@ public class Socorro {
 			a.nextLine();
 		}
 		a.close();
+	}
+
+	private static String printPai(Vertice vertice, String pais) {
+		if (vertice.getPai() == null) {
+			return (vertice.getDescricao() + "->")+pais;
+		} else {
+			pais = printPai(vertice.getPai(), pais)+"->"+vertice.getDescricao();
+			return pais;
+		}
 	}
 
 }
