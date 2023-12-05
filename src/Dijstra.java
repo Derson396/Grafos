@@ -23,7 +23,8 @@ public class Dijstra {
     List<Vertice> naoVisitados = new ArrayList<Vertice>();
 
     // Algoritmo de Dijkstra
-    public static List<Vertice> encontrarMenorCaminhoDijkstra(Grafo grafo, Vertice v1, int intervalo) throws IOException {
+    public static List<Vertice> encontrarMenorCaminhoDijkstra(Grafo grafo, Vertice v1, int intervalo)
+            throws IOException {
         Long time = System.currentTimeMillis();
         // Lista que guarda os vertices pertencentes ao menor caminho encontrado
         List<Vertice> menorCaminho = new ArrayList<Vertice>();
@@ -32,12 +33,12 @@ public class Dijstra {
         Vertice atual = new Vertice();
 
         // Variavel que marca o vizinho do vertice atualmente visitado
-        Vertice[] vizinho;
+        Vertice vizinho;
 
         // Lista dos vertices que ainda nao foram visitados
         List<Vertice> naoVisitados = new ArrayList<Vertice>();
         // Adiciona a origem na lista do menor caminho
-        
+
         // Colocando a distancias iniciais
         for (int i = 0; i < grafo.getVertices().size(); i++) {
 
@@ -75,37 +76,18 @@ public class Dijstra {
              * vizinho, esta eh atualizada.
              */
             for (int i = 0; i < atual.getGrau(); i++) {
-                Set<String> chaveSet = atual.vizinhos.keySet();
-                String[] chave=chaveSet.toString().split(",");
-                for (int j = 0; j < chave.length; j++) {
-                    for (int j2 = 0; j2 < chave[j].length(); j2++) {
-                    if (chave[j].charAt(j2)=='['||chave[j].charAt(j2)==' '||chave[j].charAt(j2)==']') {
-                        StringBuilder a= new StringBuilder(chave[j]);
-                        a.deleteCharAt(j2);
-                        chave[j]=new String(a);
-                    }
-                }
-                }
-                vizinho=new Vertice[chave.length];
-                for (int j = 0; j < chave.length; j++) {
-                    vizinho[j]=grafo.encontrarVertice(chave[j]);
-                    
-                }
-                for (int j = 0; j < vizinho.length; j++) {
-                    
-                
-                if (!vizinho[j].verificarVisita()) {
+                Parentesco aux=atual.getVizinhos().get(i);
+                vizinho=grafo.encontrarVertice(aux.getVizinho());
+                if (!vizinho.verificarVisita()) {
 
                     // Comparando a distância do vizinho com a possível
                     // distância
-                    if (vizinho[j].getDistancia() > (atual.getDistancia() + atual.getVizinhos(vizinho[j]))) {
+                    if (vizinho.getDistancia() > (atual.getDistancia() + aux.getPeso())) {
 
-                        vizinho[j].setDistancia(atual.getDistancia()
-                                + atual.getVizinhos(vizinho[j]));
-                        vizinho[j].setPai(atual);
-
+                        vizinho.setDistancia(atual.getDistancia()
+                                + aux.getPeso());
                     }
-                }}
+                }
 
             }
             // Marca o vertice atual como visitado e o retira da lista de nao
@@ -121,12 +103,13 @@ public class Dijstra {
             Collections.sort(naoVisitados);
 
         }
-        Long tempo=(System.currentTimeMillis() - time);
+        Long tempo = (System.currentTimeMillis() - time);
         File f = new File("src/ResultadoDjikstra.txt");
-			BufferedWriter br = new BufferedWriter(new FileWriter(f));
-            br.write("Djikstra com quantidade de vertice= " + grafo.getVertices().size() + " e quantidade de aresta= "+intervalo+" Demorou cerca de: " + tempo + " ms, " + ((tempo / 1000) % 60)
-					+ " segundos, " + ((tempo / 60000) % 60) + " minutos");
-                    br.close();
+        BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+        br.write("Djikstra com quantidade de vertice= " + grafo.getVertices().size() + " e quantidade de aresta= "
+                + intervalo + "\t\tDemorou cerca de: " + tempo + " ms, " + ((tempo / 60000) % 60)
+                + " minutos, " + ((tempo / 1000) % 60) + " segundos\n");
+        br.close();
         return menorCaminho;
     }
 }

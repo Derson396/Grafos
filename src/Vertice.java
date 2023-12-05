@@ -4,11 +4,10 @@ import java.util.*;
 
 public class Vertice implements Comparable<Vertice> {
     private String descricao;
-    private int distancia,grau=0;
+    private int distancia, grau = 0;
     private boolean visitado = false;
-    private Vertice pai;
-    public Map<String, Integer> vizinhos = new HashMap<String, Integer>();
-    
+    public List<Parentesco> vizinhos = new ArrayList<Parentesco>();
+
     public void setDescricao(String nome) {
 
         this.descricao = nome;
@@ -38,62 +37,23 @@ public class Vertice implements Comparable<Vertice> {
         return visitado;
     }
 
-    public void setPai(Vertice pai) {
+    public void setVizinhos(Vertice vizinho, int peso) {
 
-        this.pai = pai;
-    }
-
-    public Vertice getPai() {
-
-        return this.pai;
-    }
-    public void setVizinhos(Vertice vizinho,int peso){
-        vizinhos.put(vizinho.getDescricao(), peso);
-        vizinho.vizinhos.put(this.getDescricao(), peso);
-        vizinho.setGrau(vizinho.getGrau()+1);
+        vizinhos.add(new Parentesco(vizinho.getDescricao(), peso));
+        vizinho.vizinhos.add(new Parentesco(this.getDescricao(), peso));
+        vizinho.setGrau(vizinho.getGrau() + 1);
         grau++;
     }
-    public Integer getVizinhos(Vertice vizinho){
-        return vizinhos.get(vizinho.getDescricao());
-    }
-/**
-    public void setVizinhos(Vertice vizinho) {
 
-        this.vizinhos.add(vizinho);
-        boolean flag = true;
-        for (int i = 0; i < vizinho.getVizinhos().size(); i++) {
-            if (vizinho.getVizinhos().get(i) == this) {
-                flag = false;
+    public int getVizinhos(Vertice vizinho) {
+        for (int i = 0; i < vizinhos.size(); i++) {
+            if (vizinho.getDescricao().equals(vizinhos.get(i).getVizinho())) {
+                return vizinhos.get(i).getPeso();
             }
         }
-        if (flag) {
-            vizinho.setVizinhos(this);
-        }
+        return -1;
     }
 
-    public List<Vertice> getVizinhos() {
-
-        return this.vizinhos;
-    }
-
-    public void setArestas(Aresta aresta) {
-
-        this.arestas.add(aresta);
-        addAresta(aresta);
-
-    }
-
-    public void addAresta(Aresta aresta) {
-        Aresta w = new Aresta(aresta.getDestino(), aresta.getOrigem());
-        w.setPeso(aresta.getPeso());
-        aresta.getDestino().arestas.add(w);
-    }
-
-    public List<Aresta> getArestas() {
-
-        return arestas;
-    }
-*/
     public int compareTo(Vertice vertice) {
         if (this.getDistancia() < vertice.getDistancia())
             return -1;
@@ -129,11 +89,11 @@ public class Vertice implements Comparable<Vertice> {
         this.visitado = visitado;
     }
 
-    public Map<String, Integer> getVizinhos() {
+    public List<Parentesco> getVizinhos() {
         return vizinhos;
     }
 
-    public void setVizinhos(Map<String, Integer> vizinhos) {
+    public void setVizinhos(List<Parentesco> vizinhos) {
         this.vizinhos = vizinhos;
     }
 }

@@ -38,4 +38,7 @@ public class Grafo {
 
     }
 
+    public void removerVertice(Vertice aux) {
+    }
+
 }

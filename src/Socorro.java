@@ -114,7 +114,7 @@ public class Socorro {
 					u = pegaGrau.get(ale1);
 					w = pegaGrau.get(ale2);
 				}
-				while (u.vizinhos.get(w.getDescricao()) == null) {
+				while (u.getVizinhos(w) == -1) {
 					u.setVizinhos(w, peso);
 					j++;
 					if (u.getGrau() == n - 1) {
@@ -164,7 +164,7 @@ public class Socorro {
 					b.add(y);
 					a.remove(w);
 				}
-				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + u.getVizinhos(y).toString() + "\n");
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getVizinhos(y)) + "\n");
 			} else {
 				w = aleat.nextInt(b.size());
 				v = aleat.nextInt(a.size());
@@ -172,7 +172,7 @@ public class Socorro {
 				u.setDescricao(a.get(v).getDescricao());
 				y = b.get(w);
 				u.setVizinhos(y, aleat.nextInt(1, 500));
-				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + u.getVizinhos(y).toString() + "\n");
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getVizinhos(y)) + "\n");
 				b.add(u);
 				a.remove(v);
 			}
@@ -189,15 +189,17 @@ public class Socorro {
 		Scanner a = new Scanner(System.in);
 		while (input != 0) {
 			System.out.print(
-					"\tDigite: 0 : para sair\n"
-							+ "\tDigite: 1 : para gerar o grafo\n"
-							+ "\tDigite: 2 : para rodar o djikstra\n\t");
+					"\tDigite 0 : para sair\n"
+							+ "\tDigite 1 : para gerar grafo\n"
+							+ "\tDigite 2 : para rodar djikstra\n" + "\tDigite 3 : para rodar BellmanFord\n"
+							+ "\tDigite 4 : para rodar Floyd-Warshall\n" + "\tDigite 5 : para rodar OPF\n"
+							+ "\tDigite 6 : para rodar Johnson\n" + "\tOpção escolhida : ");
 			input = a.nextInt();
 			switch (input) {
 				case 1:
 					Long timer = System.currentTimeMillis();
 					generator();
-					Long tempo=System.currentTimeMillis()-timer;
+					Long tempo = System.currentTimeMillis() - timer;
 					System.out.println("\tTempo total; gasto para gerar em: " + tempo + " ms, " + ((tempo / 1000) % 60)
 							+ " segundos, " + ((tempo / 60000) % 60) + " minutos");
 
@@ -213,20 +215,70 @@ public class Socorro {
 							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
 							Vertice i1 = new Vertice();
 							i1 = g.encontrarVertice("v0");
-							List<Vertice> resultado = new ArrayList<Vertice>();
-							resultado = Dijstra.encontrarMenorCaminhoDijkstra(g, i1,intervalo);
-							/*System.out.println("\t Esse é o menor caminho feito pelo algoritmo de dijkstra:");
-							for (int j2 = 0; j2 < resultado.size(); j2++) {
-								String lala = "";
-								lala = printPai(resultado.get(j2), lala);
-								System.out.println("Esse e o teste " + n +" de "+intervalo+
-										"\t " + lala + " : "
-										+ resultado.get(j2).getDistancia());
-							}
-							*/
+							Dijstra.encontrarMenorCaminhoDijkstra(g, i1, intervalo);
 						}
 					}
-
+					//break;
+				case 3:
+					for (int i = 1; i <= 5; i++) {
+						int n = (int) Math.pow(5, i);
+						int limiteInferior = n - 1;
+						int limiteSuperior = (n * (n - 1)) / 2;
+						for (int j = 0; j < 5; j++) {
+							Grafo g = new Grafo();
+							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+							Vertice i1 = new Vertice();
+							i1 = g.encontrarVertice("v0");
+							BellmanFord.encontrar(g, i1, intervalo);
+						}
+					}
+					//break;
+				case 4:
+				for (int i = 1; i <= 5; i++) {
+						int n = (int) Math.pow(5, i);
+						int limiteInferior = n - 1;
+						int limiteSuperior = (n * (n - 1)) / 2;
+						for (int j = 0; j < 5; j++) {
+							Grafo g = new Grafo();
+							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+							Vertice i1 = new Vertice();
+							i1 = g.encontrarVertice("v0");
+							Floyd.encontrar(g, i1, intervalo);
+						}
+					}
+					//break;
+				case 5:
+				for (int i = 1; i <= 5; i++) {
+						int n = (int) Math.pow(5, i);
+						int limiteInferior = n - 1;
+						int limiteSuperior = (n * (n - 1)) / 2;
+						for (int j = 0; j < 5; j++) {
+							Grafo g = new Grafo();
+							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+							Vertice i1 = new Vertice();
+							i1 = g.encontrarVertice("v0");
+							OPF.encontrar(g, i1, intervalo);
+						}
+					}
+					break;
+				case 6:
+				for (int i = 1; i <= 5; i++) {
+						int n = (int) Math.pow(5, i);
+						int limiteInferior = n - 1;
+						int limiteSuperior = (n * (n - 1)) / 2;
+						for (int j = 0; j < 5; j++) {
+							Grafo g = new Grafo();
+							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+							Vertice i1 = new Vertice();
+							i1 = g.encontrarVertice("v0");
+							Jhonson.encontrar(g, i1, intervalo);
+						}
+					}
+					break;
 				default:
 					break;
 			}
@@ -234,14 +286,4 @@ public class Socorro {
 		}
 		a.close();
 	}
-
-	private static String printPai(Vertice vertice, String pais) {
-		if (vertice.getPai() == null) {
-			return (vertice.getDescricao() + "->")+pais;
-		} else {
-			pais = printPai(vertice.getPai(), pais)+"->"+vertice.getDescricao();
-			return pais;
-		}
-	}
-
 }
