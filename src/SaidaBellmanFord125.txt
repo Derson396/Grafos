@@ -1,0 +1,1260 @@
+
+ Intervalo: 124
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v111
+Vertice: v1 Com o a distancia: 2517
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v96 -> v121 -> v30
+Vertice: v2 Com o a distancia: 1881
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8
+Vertice: v3 Com o a distancia: 3428
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99
+Vertice: v4 Com o a distancia: 2671
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v5 Com o a distancia: 2752
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59
+Vertice: v6 Com o a distancia: 1567
+Antecessores: v0  -> v39 -> v95
+Vertice: v7 Com o a distancia: 607
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v8 Com o a distancia: 3056
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69
+Vertice: v9 Com o a distancia: 1636
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v92 -> v44 -> v18
+Vertice: v10 Com o a distancia: 2750
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120
+Vertice: v11 Com o a distancia: 3044
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120 -> v49
+Vertice: v12 Com o a distancia: 3428
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v13 Com o a distancia: 2725
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116
+Vertice: v14 Com o a distancia: 2209
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22
+Vertice: v15 Com o a distancia: 1805
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v16 Com o a distancia: 2891
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120 -> v49 -> v71
+Vertice: v17 Com o a distancia: 4073
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v92 -> v44
+Vertice: v18 Com o a distancia: 2656
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3
+Vertice: v19 Com o a distancia: 3444
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120 -> v49 -> v71
+Vertice: v20 Com o a distancia: 4054
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v4
+Vertice: v21 Com o a distancia: 2745
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100
+Vertice: v22 Com o a distancia: 1308
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v122
+Vertice: v23 Com o a distancia: 2508
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120 -> v49
+Vertice: v24 Com o a distancia: 3870
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3
+Vertice: v25 Com o a distancia: 3658
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v54
+Vertice: v26 Com o a distancia: 2796
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v96 -> v121 -> v30
+Vertice: v27 Com o a distancia: 2118
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114 -> v64 -> v94
+Vertice: v28 Com o a distancia: 2867
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v106
+Vertice: v29 Com o a distancia: 3066
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v96 -> v121
+Vertice: v30 Com o a distancia: 1797
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33
+Vertice: v31 Com o a distancia: 2103
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114 -> v64 -> v94
+Vertice: v32 Com o a distancia: 3130
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74
+Vertice: v33 Com o a distancia: 1929
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v119
+Vertice: v34 Com o a distancia: 3618
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8
+Vertice: v35 Com o a distancia: 3178
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22
+Vertice: v36 Com o a distancia: 1685
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69 -> v65
+Vertice: v37 Com o a distancia: 2021
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v5 -> v68
+Vertice: v38 Com o a distancia: 3328
+Antecessores: v0 
+Vertice: v39 Com o a distancia: 324
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v40 Com o a distancia: 3068
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v111
+Vertice: v41 Com o a distancia: 2371
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v19
+Vertice: v42 Com o a distancia: 3789
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99
+Vertice: v43 Com o a distancia: 2524
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v92
+Vertice: v44 Com o a distancia: 2626
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50
+Vertice: v45 Com o a distancia: 2608
+Antecessores: v0  -> v39 -> v95
+Vertice: v46 Com o a distancia: 851
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45
+Vertice: v47 Com o a distancia: 2962
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v47
+Vertice: v48 Com o a distancia: 3047
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120
+Vertice: v49 Com o a distancia: 3376
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116
+Vertice: v50 Com o a distancia: 2210
+Antecessores: v0  -> v39 -> v95 -> v46 -> v105
+Vertice: v51 Com o a distancia: 1037
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v92
+Vertice: v52 Com o a distancia: 2824
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v111 -> v41
+Vertice: v53 Com o a distancia: 2485
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99
+Vertice: v54 Com o a distancia: 2460
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v5
+Vertice: v55 Com o a distancia: 3169
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v16 -> v108
+Vertice: v56 Com o a distancia: 3426
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69
+Vertice: v57 Com o a distancia: 1860
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v25
+Vertice: v58 Com o a distancia: 3797
+Antecessores: v0  -> v39 -> v95 -> v46
+Vertice: v59 Com o a distancia: 1138
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v122 -> v23
+Vertice: v60 Com o a distancia: 2588
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v101
+Vertice: v61 Com o a distancia: 3380
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33
+Vertice: v62 Com o a distancia: 2312
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77
+Vertice: v63 Com o a distancia: 3093
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114
+Vertice: v64 Com o a distancia: 2349
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69
+Vertice: v65 Com o a distancia: 1741
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22
+Vertice: v66 Com o a distancia: 1587
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114
+Vertice: v67 Com o a distancia: 2145
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v5
+Vertice: v68 Com o a distancia: 3200
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59
+Vertice: v69 Com o a distancia: 1425
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v40
+Vertice: v70 Com o a distancia: 3252
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120 -> v49
+Vertice: v71 Com o a distancia: 3779
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v111 -> v41
+Vertice: v72 Com o a distancia: 2480
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114 -> v64 -> v94
+Vertice: v73 Com o a distancia: 3261
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100
+Vertice: v74 Com o a distancia: 1707
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114 -> v64 -> v94
+Vertice: v75 Com o a distancia: 2920
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120
+Vertice: v76 Com o a distancia: 3100
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43
+Vertice: v77 Com o a distancia: 2674
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77 -> v63
+Vertice: v78 Com o a distancia: 3528
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69 -> v84
+Vertice: v79 Com o a distancia: 1917
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77 -> v63 -> v86
+Vertice: v80 Com o a distancia: 3615
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22
+Vertice: v81 Com o a distancia: 1652
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v120
+Vertice: v82 Com o a distancia: 3383
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69 -> v65
+Vertice: v83 Com o a distancia: 1969
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69
+Vertice: v84 Com o a distancia: 1463
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100
+Vertice: v85 Com o a distancia: 1651
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77 -> v63
+Vertice: v86 Com o a distancia: 3383
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v25
+Vertice: v87 Com o a distancia: 3837
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43
+Vertice: v88 Com o a distancia: 2912
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v47 -> v48
+Vertice: v89 Com o a distancia: 3229
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v25
+Vertice: v90 Com o a distancia: 3688
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77 -> v63
+Vertice: v91 Com o a distancia: 3237
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116
+Vertice: v92 Com o a distancia: 2438
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22 -> v102
+Vertice: v93 Com o a distancia: 2017
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114 -> v64
+Vertice: v94 Com o a distancia: 2816
+Antecessores: v0  -> v39
+Vertice: v95 Com o a distancia: 597
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59
+Vertice: v96 Com o a distancia: 1358
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v96
+Vertice: v97 Com o a distancia: 1573
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v25 -> v58
+Vertice: v98 Com o a distancia: 4290
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74
+Vertice: v99 Com o a distancia: 2189
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59
+Vertice: v100 Com o a distancia: 1213
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8
+Vertice: v101 Com o a distancia: 3316
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22
+Vertice: v102 Com o a distancia: 1719
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77 -> v63 -> v78
+Vertice: v103 Com o a distancia: 3957
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v22 -> v102
+Vertice: v104 Com o a distancia: 1962
+Antecessores: v0  -> v39 -> v95 -> v46
+Vertice: v105 Com o a distancia: 1023
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43
+Vertice: v106 Com o a distancia: 2899
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v47
+Vertice: v107 Com o a distancia: 3275
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v16
+Vertice: v108 Com o a distancia: 3325
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77
+Vertice: v109 Com o a distancia: 2742
+Antecessores: v0  -> v39 -> v95 -> v46
+Vertice: v110 Com o a distancia: 1146
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33
+Vertice: v111 Com o a distancia: 2319
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v114
+Vertice: v112 Com o a distancia: 2259
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3 -> v119
+Vertice: v113 Com o a distancia: 3761
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74
+Vertice: v114 Com o a distancia: 2056
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59
+Vertice: v115 Com o a distancia: 1529
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33
+Vertice: v116 Com o a distancia: 2036
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v69 -> v65
+Vertice: v117 Com o a distancia: 1750
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43 -> v77
+Vertice: v118 Com o a distancia: 2968
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v116 -> v50 -> v45 -> v8 -> v3
+Vertice: v119 Com o a distancia: 3453
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v99 -> v43
+Vertice: v120 Com o a distancia: 2924
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v96
+Vertice: v121 Com o a distancia: 1504
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33
+Vertice: v122 Com o a distancia: 2220
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v100 -> v74 -> v33 -> v31
+Vertice: v123 Com o a distancia: 2446
+Antecessores: v0  -> v39 -> v95 -> v46 -> v59 -> v115
+Vertice: v124 Com o a distancia: 1645
+
+ Intervalo: 2030
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98 -> v16 -> v118
+Vertice: v1 Com o a distancia: 92
+Antecessores: v0  -> v99 -> v91 -> v60 -> v35
+Vertice: v2 Com o a distancia: 102
+Antecessores: v0  -> v99 -> v91 -> v60 -> v38
+Vertice: v3 Com o a distancia: 100
+Antecessores: v0  -> v47 -> v8 -> v46
+Vertice: v4 Com o a distancia: 72
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116
+Vertice: v5 Com o a distancia: 77
+Antecessores: v0  -> v99 -> v59 -> v41 -> v43 -> v87
+Vertice: v6 Com o a distancia: 107
+Antecessores: v0  -> v71
+Vertice: v7 Com o a distancia: 73
+Antecessores: v0  -> v47
+Vertice: v8 Com o a distancia: 23
+Antecessores: v0  -> v99
+Vertice: v9 Com o a distancia: 72
+Antecessores: v0  -> v99
+Vertice: v10 Com o a distancia: 55
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98
+Vertice: v11 Com o a distancia: 83
+Antecessores: v0  -> v99 -> v59 -> v73
+Vertice: v12 Com o a distancia: 92
+Antecessores: v0  -> v47 -> v8 -> v46
+Vertice: v13 Com o a distancia: 101
+Antecessores: v0  -> v99 -> v10
+Vertice: v14 Com o a distancia: 77
+Antecessores: v0  -> v47 -> v8 -> v68
+Vertice: v15 Com o a distancia: 116
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98
+Vertice: v16 Com o a distancia: 64
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51
+Vertice: v17 Com o a distancia: 78
+Antecessores: v0  -> v99 -> v91
+Vertice: v18 Com o a distancia: 33
+Antecessores: v0  -> v99 -> v91 -> v60 -> v70
+Vertice: v19 Com o a distancia: 108
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104 -> v36
+Vertice: v20 Com o a distancia: 109
+Antecessores: v0  -> v99 -> v9 -> v49
+Vertice: v21 Com o a distancia: 97
+Antecessores: v0  -> v47 -> v114
+Vertice: v22 Com o a distancia: 82
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51 -> v105
+Vertice: v23 Com o a distancia: 71
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116
+Vertice: v24 Com o a distancia: 108
+Antecessores: v0  -> v99 -> v90
+Vertice: v25 Com o a distancia: 79
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104 -> v36 -> v55
+Vertice: v26 Com o a distancia: 91
+Antecessores: v0  -> v99 -> v59 -> v41 -> v78
+Vertice: v27 Com o a distancia: 124
+Antecessores: v0  -> v99 -> v91
+Vertice: v28 Com o a distancia: 68
+Antecessores: v0  -> v47 -> v8 -> v84
+Vertice: v29 Com o a distancia: 89
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98 -> v16 -> v118
+Vertice: v30 Com o a distancia: 88
+Antecessores: v0  -> v47 -> v8 -> v67
+Vertice: v31 Com o a distancia: 96
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104
+Vertice: v32 Com o a distancia: 89
+Antecessores: v0  -> v47
+Vertice: v33 Com o a distancia: 23
+Antecessores: v0 
+Vertice: v34 Com o a distancia: 51
+Antecessores: v0  -> v99 -> v91 -> v60
+Vertice: v35 Com o a distancia: 93
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104
+Vertice: v36 Com o a distancia: 81
+Antecessores: v0  -> v99 -> v10 -> v74
+Vertice: v37 Com o a distancia: 119
+Antecessores: v0  -> v99 -> v91 -> v60
+Vertice: v38 Com o a distancia: 55
+Antecessores: v0  -> v99 -> v10 -> v74
+Vertice: v39 Com o a distancia: 91
+Antecessores: v0  -> v71 -> v76
+Vertice: v40 Com o a distancia: 79
+Antecessores: v0  -> v99 -> v59
+Vertice: v41 Com o a distancia: 59
+Antecessores: v0  -> v99 -> v10
+Vertice: v42 Com o a distancia: 91
+Antecessores: v0  -> v99 -> v59 -> v41
+Vertice: v43 Com o a distancia: 88
+Antecessores: v0  -> v47
+Vertice: v44 Com o a distancia: 54
+Antecessores: v0  -> v99 -> v59 -> v41
+Vertice: v45 Com o a distancia: 70
+Antecessores: v0  -> v47 -> v8
+Vertice: v46 Com o a distancia: 65
+Antecessores: v0 
+Vertice: v47 Com o a distancia: 17
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51 -> v17
+Vertice: v48 Com o a distancia: 89
+Antecessores: v0  -> v99 -> v9
+Vertice: v49 Com o a distancia: 84
+Antecessores: v0  -> v99 -> v91 -> v60 -> v70
+Vertice: v50 Com o a distancia: 133
+Antecessores: v0  -> v47 -> v8 -> v58
+Vertice: v51 Com o a distancia: 42
+Antecessores: v0  -> v99 -> v90
+Vertice: v52 Com o a distancia: 92
+Antecessores: v0  -> v47 -> v8 -> v58 -> v69
+Vertice: v53 Com o a distancia: 107
+Antecessores: v0  -> v99 -> v59 -> v41 -> v78
+Vertice: v54 Com o a distancia: 74
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104 -> v36
+Vertice: v55 Com o a distancia: 89
+Antecessores: v0  -> v47 -> v8 -> v68
+Vertice: v56 Com o a distancia: 63
+Antecessores: v0  -> v47 -> v33
+Vertice: v57 Com o a distancia: 40
+Antecessores: v0  -> v47 -> v8
+Vertice: v58 Com o a distancia: 36
+Antecessores: v0  -> v99
+Vertice: v59 Com o a distancia: 44
+Antecessores: v0  -> v99 -> v91
+Vertice: v60 Com o a distancia: 35
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51
+Vertice: v61 Com o a distancia: 85
+Antecessores: v0  -> v47 -> v33 -> v57
+Vertice: v62 Com o a distancia: 61
+Antecessores: v0  -> v47 -> v8 -> v68
+Vertice: v63 Com o a distancia: 99
+Antecessores: v0  -> v99 -> v10
+Vertice: v64 Com o a distancia: 102
+Antecessores: v0  -> v117
+Vertice: v65 Com o a distancia: 51
+Antecessores: v0  -> v47 -> v8 -> v46 -> v96
+Vertice: v66 Com o a distancia: 89
+Antecessores: v0  -> v47 -> v8
+Vertice: v67 Com o a distancia: 75
+Antecessores: v0  -> v47 -> v8
+Vertice: v68 Com o a distancia: 52
+Antecessores: v0  -> v47 -> v8 -> v58
+Vertice: v69 Com o a distancia: 67
+Antecessores: v0  -> v99 -> v91 -> v60
+Vertice: v70 Com o a distancia: 98
+Antecessores: v0 
+Vertice: v71 Com o a distancia: 68
+Antecessores: v0  -> v99 -> v90 -> v25
+Vertice: v72 Com o a distancia: 90
+Antecessores: v0  -> v99 -> v59
+Vertice: v73 Com o a distancia: 65
+Antecessores: v0  -> v99 -> v10
+Vertice: v74 Com o a distancia: 82
+Antecessores: v0  -> v99
+Vertice: v75 Com o a distancia: 94
+Antecessores: v0  -> v71
+Vertice: v76 Com o a distancia: 78
+Antecessores: v0  -> v99 -> v90 -> v25 -> v72
+Vertice: v77 Com o a distancia: 121
+Antecessores: v0  -> v99 -> v59 -> v41
+Vertice: v78 Com o a distancia: 67
+Antecessores: v0  -> v99 -> v91 -> v85
+Vertice: v79 Com o a distancia: 99
+Antecessores: v0  -> v117
+Vertice: v80 Com o a distancia: 64
+Antecessores: v0  -> v99 -> v91 -> v18
+Vertice: v81 Com o a distancia: 111
+Antecessores: v0  -> v99 -> v91 -> v18
+Vertice: v82 Com o a distancia: 77
+Antecessores: v0  -> v99 -> v90 -> v25
+Vertice: v83 Com o a distancia: 142
+Antecessores: v0  -> v47 -> v8
+Vertice: v84 Com o a distancia: 43
+Antecessores: v0  -> v99 -> v91
+Vertice: v85 Com o a distancia: 89
+Antecessores: v0  -> v117
+Vertice: v86 Com o a distancia: 172
+Antecessores: v0  -> v99 -> v59 -> v41 -> v43
+Vertice: v87 Com o a distancia: 97
+Antecessores: v0  -> v99 -> v10 -> v74
+Vertice: v88 Com o a distancia: 83
+Antecessores: v0  -> v99 -> v59 -> v41 -> v45
+Vertice: v89 Com o a distancia: 94
+Antecessores: v0  -> v99
+Vertice: v90 Com o a distancia: 49
+Antecessores: v0  -> v99
+Vertice: v91 Com o a distancia: 28
+Antecessores: v0  -> v99 -> v9
+Vertice: v92 Com o a distancia: 108
+Antecessores: v0  -> v47 -> v8 -> v67 -> v31
+Vertice: v93 Com o a distancia: 103
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51 -> v105
+Vertice: v94 Com o a distancia: 91
+Antecessores: v0  -> v71 -> v7
+Vertice: v95 Com o a distancia: 83
+Antecessores: v0  -> v47 -> v8 -> v46
+Vertice: v96 Com o a distancia: 84
+Antecessores: v0  -> v99 -> v59 -> v41 -> v43
+Vertice: v97 Com o a distancia: 110
+Antecessores: v0  -> v99 -> v91 -> v60
+Vertice: v98 Com o a distancia: 50
+Antecessores: v0 
+Vertice: v99 Com o a distancia: 21
+Antecessores: v0  -> v71 -> v7 -> v95
+Vertice: v100 Com o a distancia: 102
+Antecessores: v0  -> v99 -> v91
+Vertice: v101 Com o a distancia: 46
+Antecessores: v0  -> v47 -> v8 -> v68 -> v112
+Vertice: v102 Com o a distancia: 93
+Antecessores: v0  -> v99 -> v10 -> v14
+Vertice: v103 Com o a distancia: 85
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116
+Vertice: v104 Com o a distancia: 80
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51
+Vertice: v105 Com o a distancia: 56
+Antecessores: v0  -> v47 -> v8 -> v58 -> v51
+Vertice: v106 Com o a distancia: 104
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98 -> v16 -> v118 -> v1
+Vertice: v107 Com o a distancia: 97
+Antecessores: v0  -> v99 -> v59 -> v41 -> v78
+Vertice: v108 Com o a distancia: 69
+Antecessores: v0  -> v99 -> v9
+Vertice: v109 Com o a distancia: 83
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98 -> v16 -> v118 -> v1
+Vertice: v110 Com o a distancia: 93
+Antecessores: v0  -> v99 -> v59 -> v41
+Vertice: v111 Com o a distancia: 111
+Antecessores: v0  -> v47 -> v8 -> v68
+Vertice: v112 Com o a distancia: 87
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104 -> v32
+Vertice: v113 Com o a distancia: 108
+Antecessores: v0  -> v47
+Vertice: v114 Com o a distancia: 53
+Antecessores: v0  -> v47
+Vertice: v115 Com o a distancia: 94
+Antecessores: v0  -> v47 -> v8 -> v58
+Vertice: v116 Com o a distancia: 54
+Antecessores: v0 
+Vertice: v117 Com o a distancia: 42
+Antecessores: v0  -> v99 -> v91 -> v60 -> v98 -> v16
+Vertice: v118 Com o a distancia: 84
+Antecessores: v0  -> v99 -> v59 -> v73 -> v12
+Vertice: v119 Com o a distancia: 117
+Antecessores: v0  -> v47 -> v8 -> v67 -> v31 -> v93
+Vertice: v120 Com o a distancia: 127
+Antecessores: v0  -> v47 -> v8 -> v46 -> v13
+Vertice: v121 Com o a distancia: 105
+Antecessores: v0  -> v47
+Vertice: v122 Com o a distancia: 64
+Antecessores: v0  -> v47 -> v8 -> v58 -> v116 -> v104 -> v36 -> v55
+Vertice: v123 Com o a distancia: 95
+Antecessores: v0  -> v117 -> v80
+Vertice: v124 Com o a distancia: 87
+
+ Intervalo: 3937
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0  -> v121 -> v13 -> v110
+Vertice: v1 Com o a distancia: 24
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v2 Com o a distancia: 37
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21
+Vertice: v3 Com o a distancia: 35
+Antecessores: v0  -> v121 -> v46
+Vertice: v4 Com o a distancia: 36
+Antecessores: v0  -> v26
+Vertice: v5 Com o a distancia: 54
+Antecessores: v0  -> v47 -> v38 -> v35 -> v87
+Vertice: v6 Com o a distancia: 42
+Antecessores: v0  -> v50 -> v71
+Vertice: v7 Com o a distancia: 22
+Antecessores: v0  -> v47
+Vertice: v8 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v49
+Vertice: v9 Com o a distancia: 48
+Antecessores: v0  -> v121 -> v13
+Vertice: v10 Com o a distancia: 21
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v11 Com o a distancia: 33
+Antecessores: v0  -> v47 -> v23 -> v119
+Vertice: v12 Com o a distancia: 51
+Antecessores: v0  -> v121
+Vertice: v13 Com o a distancia: 5
+Antecessores: v0  -> v50 -> v71 -> v76
+Vertice: v14 Com o a distancia: 29
+Antecessores: v0  -> v67
+Vertice: v15 Com o a distancia: 36
+Antecessores: v0  -> v121 -> v98
+Vertice: v16 Com o a distancia: 21
+Antecessores: v0  -> v26 -> v55 -> v45
+Vertice: v17 Com o a distancia: 37
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112 -> v91
+Vertice: v18 Com o a distancia: 31
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36 -> v104
+Vertice: v19 Com o a distancia: 51
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v3 -> v68
+Vertice: v20 Com o a distancia: 48
+Antecessores: v0  -> v121 -> v13 -> v10
+Vertice: v21 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v49
+Vertice: v22 Com o a distancia: 45
+Antecessores: v0  -> v47
+Vertice: v23 Com o a distancia: 24
+Antecessores: v0  -> v47
+Vertice: v24 Com o a distancia: 65
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1 -> v72
+Vertice: v25 Com o a distancia: 43
+Antecessores: v0 
+Vertice: v26 Com o a distancia: 30
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29 -> v77
+Vertice: v27 Com o a distancia: 45
+Antecessores: v0  -> v47
+Vertice: v28 Com o a distancia: 41
+Antecessores: v0  -> v121 -> v98 -> v60
+Vertice: v29 Com o a distancia: 23
+Antecessores: v0  -> v47 -> v23 -> v119
+Vertice: v30 Com o a distancia: 36
+Antecessores: v0  -> v67
+Vertice: v31 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36 -> v104
+Vertice: v32 Com o a distancia: 38
+Antecessores: v0  -> v47
+Vertice: v33 Com o a distancia: 23
+Antecessores: v0 
+Vertice: v34 Com o a distancia: 51
+Antecessores: v0  -> v47 -> v38
+Vertice: v35 Com o a distancia: 31
+Antecessores: v0  -> v121 -> v13 -> v111
+Vertice: v36 Com o a distancia: 28
+Antecessores: v0  -> v50 -> v71 -> v74 -> v122
+Vertice: v37 Com o a distancia: 37
+Antecessores: v0  -> v47
+Vertice: v38 Com o a distancia: 25
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v39 Com o a distancia: 28
+Antecessores: v0  -> v50 -> v71 -> v76
+Vertice: v40 Com o a distancia: 28
+Antecessores: v0  -> v50 -> v71 -> v7 -> v69
+Vertice: v41 Com o a distancia: 25
+Antecessores: v0  -> v121 -> v98 -> v89
+Vertice: v42 Com o a distancia: 41
+Antecessores: v0  -> v47 -> v38 -> v35 -> v87
+Vertice: v43 Com o a distancia: 41
+Antecessores: v0  -> v47
+Vertice: v44 Com o a distancia: 54
+Antecessores: v0  -> v26 -> v55
+Vertice: v45 Com o a distancia: 33
+Antecessores: v0  -> v121
+Vertice: v46 Com o a distancia: 29
+Antecessores: v0 
+Vertice: v47 Com o a distancia: 17
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v48 Com o a distancia: 41
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21
+Vertice: v49 Com o a distancia: 36
+Antecessores: v0 
+Vertice: v50 Com o a distancia: 14
+Antecessores: v0  -> v121 -> v13 -> v110 -> v58
+Vertice: v51 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13 -> v110
+Vertice: v52 Com o a distancia: 44
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40 -> v115
+Vertice: v53 Com o a distancia: 57
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v78
+Vertice: v54 Com o a distancia: 37
+Antecessores: v0  -> v26
+Vertice: v55 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v3 -> v68
+Vertice: v56 Com o a distancia: 50
+Antecessores: v0  -> v50 -> v71 -> v7 -> v95
+Vertice: v57 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13 -> v110
+Vertice: v58 Com o a distancia: 33
+Antecessores: v0  -> v50 -> v71 -> v7 -> v69 -> v41
+Vertice: v59 Com o a distancia: 40
+Antecessores: v0  -> v121 -> v98
+Vertice: v60 Com o a distancia: 22
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1 -> v118
+Vertice: v61 Com o a distancia: 42
+Antecessores: v0  -> v47 -> v23 -> v119
+Vertice: v62 Com o a distancia: 33
+Antecessores: v0  -> v47 -> v33
+Vertice: v63 Com o a distancia: 47
+Antecessores: v0  -> v50 -> v71 -> v74 -> v122
+Vertice: v64 Com o a distancia: 59
+Antecessores: v0  -> v47 -> v84
+Vertice: v65 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v98 -> v89
+Vertice: v66 Com o a distancia: 32
+Antecessores: v0 
+Vertice: v67 Com o a distancia: 18
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v3
+Vertice: v68 Com o a distancia: 39
+Antecessores: v0  -> v50 -> v71 -> v7
+Vertice: v69 Com o a distancia: 23
+Antecessores: v0  -> v50
+Vertice: v70 Com o a distancia: 49
+Antecessores: v0  -> v50
+Vertice: v71 Com o a distancia: 17
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v72 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29 -> v77
+Vertice: v73 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71
+Vertice: v74 Com o a distancia: 19
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v49 -> v9
+Vertice: v75 Com o a distancia: 70
+Antecessores: v0  -> v50 -> v71
+Vertice: v76 Com o a distancia: 27
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29
+Vertice: v77 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21
+Vertice: v78 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71 -> v74 -> v39 -> v85
+Vertice: v79 Com o a distancia: 49
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v80 Com o a distancia: 55
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v81 Com o a distancia: 46
+Antecessores: v0  -> v121 -> v46
+Vertice: v82 Com o a distancia: 48
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v78
+Vertice: v83 Com o a distancia: 31
+Antecessores: v0  -> v47
+Vertice: v84 Com o a distancia: 21
+Antecessores: v0  -> v50 -> v71 -> v74 -> v39
+Vertice: v85 Com o a distancia: 39
+Antecessores: v0  -> v26 -> v55 -> v45 -> v17
+Vertice: v86 Com o a distancia: 54
+Antecessores: v0  -> v47 -> v38 -> v35
+Vertice: v87 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v88 Com o a distancia: 20
+Antecessores: v0  -> v121 -> v98
+Vertice: v89 Com o a distancia: 29
+Antecessores: v0  -> v99
+Vertice: v90 Com o a distancia: 49
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112
+Vertice: v91 Com o a distancia: 26
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v92 Com o a distancia: 48
+Antecessores: v0  -> v121 -> v98 -> v89 -> v42
+Vertice: v93 Com o a distancia: 43
+Antecessores: v0  -> v50 -> v71 -> v76 -> v14 -> v103
+Vertice: v94 Com o a distancia: 45
+Antecessores: v0  -> v50 -> v71 -> v7
+Vertice: v95 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v96 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36 -> v104
+Vertice: v97 Com o a distancia: 49
+Antecessores: v0  -> v121
+Vertice: v98 Com o a distancia: 7
+Antecessores: v0 
+Vertice: v99 Com o a distancia: 21
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112 -> v91 -> v18
+Vertice: v100 Com o a distancia: 42
+Antecessores: v0  -> v121
+Vertice: v101 Com o a distancia: 42
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112
+Vertice: v102 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71 -> v76 -> v14
+Vertice: v103 Com o a distancia: 37
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36
+Vertice: v104 Com o a distancia: 29
+Antecessores: v0  -> v47 -> v23
+Vertice: v105 Com o a distancia: 39
+Antecessores: v0  -> v50 -> v71 -> v76
+Vertice: v106 Com o a distancia: 51
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v107 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v78
+Vertice: v108 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v49 -> v9
+Vertice: v109 Com o a distancia: 59
+Antecessores: v0  -> v121 -> v13
+Vertice: v110 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v13
+Vertice: v111 Com o a distancia: 26
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v112 Com o a distancia: 24
+Antecessores: v0  -> v47 -> v38 -> v35 -> v87 -> v6
+Vertice: v113 Com o a distancia: 54
+Antecessores: v0  -> v47
+Vertice: v114 Com o a distancia: 53
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v115 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29
+Vertice: v116 Com o a distancia: 43
+Antecessores: v0 
+Vertice: v117 Com o a distancia: 42
+Antecessores: v0  -> v121 -> v13 -> v110 -> v1
+Vertice: v118 Com o a distancia: 32
+Antecessores: v0  -> v47 -> v23
+Vertice: v119 Com o a distancia: 26
+Antecessores: v0  -> v47 -> v23 -> v119 -> v30
+Vertice: v120 Com o a distancia: 59
+Antecessores: v0 
+Vertice: v121 Com o a distancia: 1
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v122 Com o a distancia: 34
+Antecessores: v0  -> v26 -> v55
+Vertice: v123 Com o a distancia: 38
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v78 -> v54
+Vertice: v124 Com o a distancia: 68
+
+ Intervalo: 5843
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0  -> v121 -> v13
+Vertice: v1 Com o a distancia: 20
+Antecessores: v0  -> v67
+Vertice: v2 Com o a distancia: 28
+Antecessores: v0  -> v47 -> v101 -> v68
+Vertice: v3 Com o a distancia: 30
+Antecessores: v0  -> v47 -> v23 -> v119
+Vertice: v4 Com o a distancia: 35
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36 -> v104
+Vertice: v5 Com o a distancia: 36
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v93 -> v86
+Vertice: v6 Com o a distancia: 34
+Antecessores: v0  -> v50 -> v71
+Vertice: v7 Com o a distancia: 22
+Antecessores: v0  -> v47
+Vertice: v8 Com o a distancia: 23
+Antecessores: v0  -> v47 -> v33 -> v70
+Vertice: v9 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13
+Vertice: v10 Com o a distancia: 21
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v11 Com o a distancia: 33
+Antecessores: v0  -> v47 -> v23 -> v119
+Vertice: v12 Com o a distancia: 51
+Antecessores: v0  -> v121
+Vertice: v13 Com o a distancia: 5
+Antecessores: v0  -> v50 -> v71 -> v76
+Vertice: v14 Com o a distancia: 29
+Antecessores: v0  -> v67
+Vertice: v15 Com o a distancia: 36
+Antecessores: v0  -> v121 -> v98
+Vertice: v16 Com o a distancia: 21
+Antecessores: v0  -> v121 -> v13 -> v26 -> v55 -> v45
+Vertice: v17 Com o a distancia: 35
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112 -> v91
+Vertice: v18 Com o a distancia: 31
+Antecessores: v0  -> v99
+Vertice: v19 Com o a distancia: 37
+Antecessores: v0  -> v121 -> v98 -> v120
+Vertice: v20 Com o a distancia: 31
+Antecessores: v0  -> v121 -> v13 -> v10
+Vertice: v21 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21 -> v49
+Vertice: v22 Com o a distancia: 45
+Antecessores: v0  -> v47
+Vertice: v23 Com o a distancia: 24
+Antecessores: v0  -> v121 -> v13 -> v1 -> v118
+Vertice: v24 Com o a distancia: 35
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88
+Vertice: v25 Com o a distancia: 34
+Antecessores: v0  -> v121 -> v13
+Vertice: v26 Com o a distancia: 28
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29 -> v77
+Vertice: v27 Com o a distancia: 45
+Antecessores: v0  -> v47
+Vertice: v28 Com o a distancia: 41
+Antecessores: v0  -> v121 -> v98 -> v60
+Vertice: v29 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v13 -> v1 -> v118
+Vertice: v30 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v93
+Vertice: v31 Com o a distancia: 36
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v93
+Vertice: v32 Com o a distancia: 37
+Antecessores: v0  -> v47
+Vertice: v33 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29 -> v77 -> v73
+Vertice: v34 Com o a distancia: 32
+Antecessores: v0  -> v47 -> v38
+Vertice: v35 Com o a distancia: 31
+Antecessores: v0  -> v121 -> v13 -> v111
+Vertice: v36 Com o a distancia: 28
+Antecessores: v0  -> v121 -> v13 -> v69 -> v116 -> v122
+Vertice: v37 Com o a distancia: 35
+Antecessores: v0  -> v47
+Vertice: v38 Com o a distancia: 25
+Antecessores: v0  -> v50 -> v71
+Vertice: v39 Com o a distancia: 28
+Antecessores: v0  -> v50 -> v71 -> v76
+Vertice: v40 Com o a distancia: 28
+Antecessores: v0  -> v50 -> v71 -> v7
+Vertice: v41 Com o a distancia: 23
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v93
+Vertice: v42 Com o a distancia: 31
+Antecessores: v0  -> v47 -> v38 -> v35 -> v87
+Vertice: v43 Com o a distancia: 41
+Antecessores: v0  -> v50
+Vertice: v44 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v13 -> v26 -> v55
+Vertice: v45 Com o a distancia: 31
+Antecessores: v0  -> v121
+Vertice: v46 Com o a distancia: 29
+Antecessores: v0 
+Vertice: v47 Com o a distancia: 17
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v48 Com o a distancia: 41
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21
+Vertice: v49 Com o a distancia: 36
+Antecessores: v0 
+Vertice: v50 Com o a distancia: 14
+Antecessores: v0  -> v121 -> v13 -> v1 -> v110 -> v58
+Vertice: v51 Com o a distancia: 37
+Antecessores: v0  -> v121 -> v13 -> v1 -> v110
+Vertice: v52 Com o a distancia: 42
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v83 -> v78 -> v108
+Vertice: v53 Com o a distancia: 33
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v83 -> v78
+Vertice: v54 Com o a distancia: 33
+Antecessores: v0  -> v121 -> v13 -> v26
+Vertice: v55 Com o a distancia: 30
+Antecessores: v0  -> v121
+Vertice: v56 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71 -> v7 -> v95
+Vertice: v57 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13 -> v1 -> v110
+Vertice: v58 Com o a distancia: 31
+Antecessores: v0  -> v50 -> v71 -> v7
+Vertice: v59 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v98
+Vertice: v60 Com o a distancia: 22
+Antecessores: v0  -> v121 -> v13 -> v1 -> v118
+Vertice: v61 Com o a distancia: 38
+Antecessores: v0  -> v121 -> v13 -> v26 -> v55
+Vertice: v62 Com o a distancia: 31
+Antecessores: v0  -> v121 -> v13 -> v69 -> v116 -> v122 -> v37
+Vertice: v63 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v13 -> v1 -> v110 -> v58
+Vertice: v64 Com o a distancia: 45
+Antecessores: v0  -> v47 -> v84
+Vertice: v65 Com o a distancia: 39
+Antecessores: v0  -> v121 -> v98 -> v89
+Vertice: v66 Com o a distancia: 32
+Antecessores: v0 
+Vertice: v67 Com o a distancia: 18
+Antecessores: v0  -> v47 -> v101
+Vertice: v68 Com o a distancia: 26
+Antecessores: v0  -> v121 -> v13
+Vertice: v69 Com o a distancia: 21
+Antecessores: v0  -> v47 -> v33
+Vertice: v70 Com o a distancia: 29
+Antecessores: v0  -> v50
+Vertice: v71 Com o a distancia: 17
+Antecessores: v0  -> v121 -> v13 -> v1
+Vertice: v72 Com o a distancia: 28
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29 -> v77
+Vertice: v73 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71
+Vertice: v74 Com o a distancia: 19
+Antecessores: v0  -> v121 -> v13
+Vertice: v75 Com o a distancia: 51
+Antecessores: v0  -> v50 -> v71
+Vertice: v76 Com o a distancia: 27
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29
+Vertice: v77 Com o a distancia: 29
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v83
+Vertice: v78 Com o a distancia: 26
+Antecessores: v0  -> v50 -> v71 -> v7 -> v59 -> v103 -> v85
+Vertice: v79 Com o a distancia: 44
+Antecessores: v0  -> v121 -> v13 -> v1
+Vertice: v80 Com o a distancia: 51
+Antecessores: v0  -> v121 -> v13 -> v10 -> v21
+Vertice: v81 Com o a distancia: 39
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112 -> v102
+Vertice: v82 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107
+Vertice: v83 Com o a distancia: 25
+Antecessores: v0  -> v47
+Vertice: v84 Com o a distancia: 21
+Antecessores: v0  -> v50 -> v71 -> v7 -> v59 -> v103
+Vertice: v85 Com o a distancia: 34
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v93
+Vertice: v86 Com o a distancia: 30
+Antecessores: v0  -> v47 -> v38 -> v35
+Vertice: v87 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v88 Com o a distancia: 20
+Antecessores: v0  -> v121 -> v98
+Vertice: v89 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v98 -> v16
+Vertice: v90 Com o a distancia: 24
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112
+Vertice: v91 Com o a distancia: 26
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v92 Com o a distancia: 48
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107
+Vertice: v93 Com o a distancia: 29
+Antecessores: v0  -> v50 -> v71 -> v7 -> v59 -> v103
+Vertice: v94 Com o a distancia: 33
+Antecessores: v0  -> v50 -> v71 -> v7
+Vertice: v95 Com o a distancia: 32
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v96 Com o a distancia: 32
+Antecessores: v0  -> v47 -> v84 -> v65
+Vertice: v97 Com o a distancia: 45
+Antecessores: v0  -> v121
+Vertice: v98 Com o a distancia: 7
+Antecessores: v0 
+Vertice: v99 Com o a distancia: 21
+Antecessores: v0  -> v67 -> v2
+Vertice: v100 Com o a distancia: 39
+Antecessores: v0  -> v47
+Vertice: v101 Com o a distancia: 23
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112
+Vertice: v102 Com o a distancia: 30
+Antecessores: v0  -> v50 -> v71 -> v7 -> v59
+Vertice: v103 Com o a distancia: 25
+Antecessores: v0  -> v121 -> v13 -> v111 -> v36
+Vertice: v104 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v13 -> v1
+Vertice: v105 Com o a distancia: 34
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v83 -> v78 -> v108
+Vertice: v106 Com o a distancia: 29
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88
+Vertice: v107 Com o a distancia: 22
+Antecessores: v0  -> v50 -> v71 -> v74 -> v88 -> v107 -> v83 -> v78
+Vertice: v108 Com o a distancia: 28
+Antecessores: v0  -> v121 -> v13 -> v1 -> v72
+Vertice: v109 Com o a distancia: 30
+Antecessores: v0  -> v121 -> v13 -> v1
+Vertice: v110 Com o a distancia: 21
+Antecessores: v0  -> v121 -> v13
+Vertice: v111 Com o a distancia: 26
+Antecessores: v0  -> v50 -> v71 -> v74
+Vertice: v112 Com o a distancia: 24
+Antecessores: v0  -> v50 -> v71 -> v74 -> v112 -> v91
+Vertice: v113 Com o a distancia: 43
+Antecessores: v0  -> v121 -> v13 -> v1 -> v72 -> v109
+Vertice: v114 Com o a distancia: 43
+Antecessores: v0  -> v50 -> v71 -> v76 -> v40
+Vertice: v115 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v13 -> v69
+Vertice: v116 Com o a distancia: 29
+Antecessores: v0 
+Vertice: v117 Com o a distancia: 42
+Antecessores: v0  -> v121 -> v13 -> v1
+Vertice: v118 Com o a distancia: 28
+Antecessores: v0  -> v47 -> v23
+Vertice: v119 Com o a distancia: 26
+Antecessores: v0  -> v121 -> v98
+Vertice: v120 Com o a distancia: 9
+Antecessores: v0 
+Vertice: v121 Com o a distancia: 1
+Antecessores: v0  -> v121 -> v13 -> v69 -> v116
+Vertice: v122 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v13 -> v26 -> v55 -> v62
+Vertice: v123 Com o a distancia: 32
+Antecessores: v0  -> v121 -> v98 -> v60 -> v29
+Vertice: v124 Com o a distancia: 46
+
+ Intervalo: 7750
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107
+Vertice: v1 Com o a distancia: 16
+Antecessores: v0  -> v67
+Vertice: v2 Com o a distancia: 28
+Antecessores: v0  -> v108 -> v78 -> v21
+Vertice: v3 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v119
+Vertice: v4 Com o a distancia: 28
+Antecessores: v0  -> v121
+Vertice: v5 Com o a distancia: 10
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93 -> v86
+Vertice: v6 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78 -> v41
+Vertice: v7 Com o a distancia: 16
+Antecessores: v0  -> v47
+Vertice: v8 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v98 -> v60
+Vertice: v9 Com o a distancia: 28
+Antecessores: v0  -> v108 -> v78 -> v21
+Vertice: v10 Com o a distancia: 16
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74
+Vertice: v11 Com o a distancia: 28
+Antecessores: v0  -> v108 -> v78 -> v77 -> v73
+Vertice: v12 Com o a distancia: 43
+Antecessores: v0  -> v121
+Vertice: v13 Com o a distancia: 5
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v40 -> v76
+Vertice: v14 Com o a distancia: 22
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74 -> v71
+Vertice: v15 Com o a distancia: 18
+Antecessores: v0  -> v121 -> v98
+Vertice: v16 Com o a distancia: 21
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55 -> v45
+Vertice: v17 Com o a distancia: 27
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74 -> v112 -> v91
+Vertice: v18 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58
+Vertice: v19 Com o a distancia: 31
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7
+Vertice: v20 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78
+Vertice: v21 Com o a distancia: 14
+Antecessores: v0  -> v108 -> v78 -> v21 -> v49
+Vertice: v22 Com o a distancia: 36
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v119
+Vertice: v23 Com o a distancia: 21
+Antecessores: v0 
+Vertice: v24 Com o a distancia: 17
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88
+Vertice: v25 Com o a distancia: 27
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55
+Vertice: v26 Com o a distancia: 24
+Antecessores: v0  -> v108 -> v106
+Vertice: v27 Com o a distancia: 31
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93
+Vertice: v28 Com o a distancia: 39
+Antecessores: v0  -> v108 -> v78 -> v77
+Vertice: v29 Com o a distancia: 21
+Antecessores: v0  -> v121 -> v98
+Vertice: v30 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v77
+Vertice: v31 Com o a distancia: 22
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v104
+Vertice: v32 Com o a distancia: 24
+Antecessores: v0  -> v47
+Vertice: v33 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78 -> v77 -> v73
+Vertice: v34 Com o a distancia: 18
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58
+Vertice: v35 Com o a distancia: 20
+Antecessores: v0  -> v121 -> v5 -> v111
+Vertice: v36 Com o a distancia: 14
+Antecessores: v0  -> v108 -> v78 -> v54 -> v122
+Vertice: v37 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107
+Vertice: v38 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74
+Vertice: v39 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88
+Vertice: v40 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78
+Vertice: v41 Com o a distancia: 15
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93
+Vertice: v42 Com o a distancia: 20
+Antecessores: v0  -> v108 -> v78 -> v77 -> v73 -> v34
+Vertice: v43 Com o a distancia: 25
+Antecessores: v0  -> v50
+Vertice: v44 Com o a distancia: 29
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55
+Vertice: v45 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55
+Vertice: v46 Com o a distancia: 26
+Antecessores: v0 
+Vertice: v47 Com o a distancia: 17
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v40
+Vertice: v48 Com o a distancia: 32
+Antecessores: v0  -> v108 -> v78 -> v21
+Vertice: v49 Com o a distancia: 27
+Antecessores: v0 
+Vertice: v50 Com o a distancia: 14
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58
+Vertice: v51 Com o a distancia: 22
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88
+Vertice: v52 Com o a distancia: 26
+Antecessores: v0  -> v108
+Vertice: v53 Com o a distancia: 10
+Antecessores: v0  -> v108 -> v78
+Vertice: v54 Com o a distancia: 14
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36
+Vertice: v55 Com o a distancia: 22
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v104
+Vertice: v56 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78 -> v77
+Vertice: v57 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107
+Vertice: v58 Com o a distancia: 16
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7
+Vertice: v59 Com o a distancia: 17
+Antecessores: v0  -> v121 -> v98
+Vertice: v60 Com o a distancia: 22
+Antecessores: v0  -> v121 -> v98 -> v120
+Vertice: v61 Com o a distancia: 28
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55
+Vertice: v62 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78 -> v54 -> v122 -> v37
+Vertice: v63 Com o a distancia: 30
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58
+Vertice: v64 Com o a distancia: 30
+Antecessores: v0  -> v108 -> v78 -> v77 -> v31
+Vertice: v65 Com o a distancia: 27
+Antecessores: v0  -> v108 -> v78 -> v54 -> v89
+Vertice: v66 Com o a distancia: 26
+Antecessores: v0 
+Vertice: v67 Com o a distancia: 18
+Antecessores: v0  -> v47 -> v101
+Vertice: v68 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v41
+Vertice: v69 Com o a distancia: 17
+Antecessores: v0  -> v47 -> v33
+Vertice: v70 Com o a distancia: 29
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74
+Vertice: v71 Com o a distancia: 16
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v1
+Vertice: v72 Com o a distancia: 24
+Antecessores: v0  -> v108 -> v78 -> v77
+Vertice: v73 Com o a distancia: 16
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88
+Vertice: v74 Com o a distancia: 14
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93 -> v28
+Vertice: v75 Com o a distancia: 45
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v40
+Vertice: v76 Com o a distancia: 20
+Antecessores: v0  -> v108 -> v78
+Vertice: v77 Com o a distancia: 15
+Antecessores: v0  -> v108
+Vertice: v78 Com o a distancia: 7
+Antecessores: v0  -> v108 -> v78 -> v102
+Vertice: v79 Com o a distancia: 26
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93 -> v86 -> v6 -> v113
+Vertice: v80 Com o a distancia: 46
+Antecessores: v0  -> v108 -> v78 -> v21
+Vertice: v81 Com o a distancia: 30
+Antecessores: v0  -> v108 -> v78 -> v102
+Vertice: v82 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78
+Vertice: v83 Com o a distancia: 8
+Antecessores: v0  -> v47
+Vertice: v84 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7 -> v59 -> v103
+Vertice: v85 Com o a distancia: 28
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93
+Vertice: v86 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58 -> v35
+Vertice: v87 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107
+Vertice: v88 Com o a distancia: 13
+Antecessores: v0  -> v108 -> v78 -> v54
+Vertice: v89 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v98 -> v16
+Vertice: v90 Com o a distancia: 24
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74 -> v112
+Vertice: v91 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78 -> v77 -> v73 -> v34 -> v43
+Vertice: v92 Com o a distancia: 30
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107
+Vertice: v93 Com o a distancia: 18
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7 -> v59 -> v103
+Vertice: v94 Com o a distancia: 27
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36
+Vertice: v95 Com o a distancia: 22
+Antecessores: v0  -> v108
+Vertice: v96 Com o a distancia: 22
+Antecessores: v0  -> v108 -> v78 -> v102 -> v79
+Vertice: v97 Com o a distancia: 27
+Antecessores: v0  -> v121
+Vertice: v98 Com o a distancia: 7
+Antecessores: v0 
+Vertice: v99 Com o a distancia: 21
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7 -> v20
+Vertice: v100 Com o a distancia: 35
+Antecessores: v0  -> v47
+Vertice: v101 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78
+Vertice: v102 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78 -> v41 -> v7 -> v59
+Vertice: v103 Com o a distancia: 19
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36
+Vertice: v104 Com o a distancia: 15
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v1
+Vertice: v105 Com o a distancia: 30
+Antecessores: v0  -> v108
+Vertice: v106 Com o a distancia: 6
+Antecessores: v0  -> v108 -> v78 -> v83
+Vertice: v107 Com o a distancia: 11
+Antecessores: v0 
+Vertice: v108 Com o a distancia: 5
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v58 -> v35 -> v87
+Vertice: v109 Com o a distancia: 25
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v1
+Vertice: v110 Com o a distancia: 17
+Antecessores: v0  -> v121 -> v5
+Vertice: v111 Com o a distancia: 12
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v74
+Vertice: v112 Com o a distancia: 19
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v93 -> v86 -> v6
+Vertice: v113 Com o a distancia: 35
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v119 -> v23
+Vertice: v114 Com o a distancia: 34
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88 -> v40
+Vertice: v115 Com o a distancia: 23
+Antecessores: v0  -> v108 -> v78 -> v41 -> v69
+Vertice: v116 Com o a distancia: 25
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v104 -> v56
+Vertice: v117 Com o a distancia: 30
+Antecessores: v0  -> v24
+Vertice: v118 Com o a distancia: 24
+Antecessores: v0  -> v108 -> v78 -> v83 -> v107 -> v88
+Vertice: v119 Com o a distancia: 19
+Antecessores: v0  -> v121 -> v98
+Vertice: v120 Com o a distancia: 9
+Antecessores: v0 
+Vertice: v121 Com o a distancia: 1
+Antecessores: v0  -> v108 -> v78 -> v54
+Vertice: v122 Com o a distancia: 23
+Antecessores: v0  -> v121 -> v5 -> v111 -> v36 -> v55 -> v62
+Vertice: v123 Com o a distancia: 24
+Antecessores: v0  -> v108 -> v78 -> v77 -> v29
+Vertice: v124 Com o a distancia: 44

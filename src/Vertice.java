@@ -6,7 +6,16 @@ public class Vertice implements Comparable<Vertice> {
     private String descricao;
     private int distancia, grau = 0;
     private boolean visitado = false;
-    public List<Parentesco> vizinhos = new ArrayList<Parentesco>();
+    public List<Aresta> arestas = new ArrayList<Aresta>();
+    private boolean jaArestado=false;
+    public int pai;
+    public int getPai() {
+        return pai;
+    }
+
+    public void setPai(int pai) {
+        this.pai = pai;
+    }
 
     public void setDescricao(String nome) {
 
@@ -37,18 +46,15 @@ public class Vertice implements Comparable<Vertice> {
         return visitado;
     }
 
-    public void setVizinhos(Vertice vizinho, int peso) {
-
-        vizinhos.add(new Parentesco(vizinho.getDescricao(), peso));
-        vizinho.vizinhos.add(new Parentesco(this.getDescricao(), peso));
-        vizinho.setGrau(vizinho.getGrau() + 1);
-        grau++;
+    public void setArestas(Grafo g,Vertice vizinho, int peso) {
+        arestas.add(new Aresta(g,this,vizinho, peso));
+            vizinho.arestas.add(new Aresta(g,vizinho,this, peso));
     }
 
-    public int getVizinhos(Vertice vizinho) {
-        for (int i = 0; i < vizinhos.size(); i++) {
-            if (vizinho.getDescricao().equals(vizinhos.get(i).getVizinho())) {
-                return vizinhos.get(i).getPeso();
+    public int getarestas(Vertice vizinho) {
+        for (int i = 0; i < arestas.size(); i++) {
+            if (vizinho.getDescricao().equals(arestas.get(i).getV().getDescricao())) {
+                return arestas.get(i).getPeso();
             }
         }
         return -1;
@@ -89,11 +95,11 @@ public class Vertice implements Comparable<Vertice> {
         this.visitado = visitado;
     }
 
-    public List<Parentesco> getVizinhos() {
-        return vizinhos;
+    public List<Aresta> getarestas() {
+        return arestas;
     }
 
-    public void setVizinhos(List<Parentesco> vizinhos) {
-        this.vizinhos = vizinhos;
+    public void setarestas(List<Aresta> arestas) {
+        this.arestas = arestas;
     }
 }

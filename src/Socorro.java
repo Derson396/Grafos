@@ -10,71 +10,52 @@ import java.io.IOException;
 import java.util.*;
 
 public class Socorro {
-	public static List<Vertice> lerGrafo(String nomeArquivo, int limite) {
+	public static Grafo lerGrafo(String nomeArquivo, int limite) {
+        Grafo g = new Grafo();
+        File f = new File(nomeArquivo);
 
-		Grafo g = new Grafo();
-		Vertice v = null;
-		File f = new File(nomeArquivo);
-		String vertices[];
-		String linha;
-		ArrayList<String[]> s1 = new ArrayList<String[]>();
+        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+            Map<String, Vertice> mapa = new HashMap<>();
 
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(f));
+            String linha;
+            while ((linha = br.readLine()) != null && limite > 0) {
+                limite--;
 
-			Map<String, Vertice> mapa = new HashMap<String, Vertice>();
-			int contador = 0;
-			while ((linha = br.readLine()) != null && limite != contador) {
-				contador++;
-				Vertice vit = null;
-				if (linha.contains(",")) {
-					s1.add(linha.split("/"));
-					vertices = s1.get(0)[0].split(",");
+                String[] partes = linha.split("/");
+                String[] vertices = partes[0].split(",");
 
-					v = (Vertice) mapa.get(vertices[0]);
-					if (v == null)
-						v = new Vertice();
-
-					v.setDescricao(vertices[0]);
-					mapa.put(vertices[0], v);
-
-					if (linha.contains("/")) {
-
-						String pesoArestas[] = s1.get(0)[1].split(",");
-
-						vit = mapa.get(vertices[1]);
-						if (vit == null)
-							vit = new Vertice();
-						vit.setDescricao(vertices[1]);
-
-						mapa.put(vertices[1], vit);
-
-						v.setVizinhos(vit, Integer.parseInt(pesoArestas[0]));
-					}
-
+				Vertice v1 = mapa.get(vertices[0]);
+				if (v1 == null) {
+					v1 = new Vertice();
+					v1.setDescricao(vertices[0]);
+					mapa.put(vertices[0], v1);
 				}
-				g.adicionarVertice(vit);
-				g.adicionarVertice(v);
-				s1.clear();
-			}
+				
+				Vertice v2 = mapa.get(vertices[1]);
+				if (v2 == null) {
+					v2 = new Vertice();
+					v2.setDescricao(vertices[1]);
+					mapa.put(vertices[1], v2);
+				}
+                g.adicionarVertice(v1);
+                g.adicionarVertice(v2);
 
-			// catch do BufferedReader
-			// }
-			br.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("Nao encontrou o arquivo");
-			e.printStackTrace();
-		}
-		// catch do readLine
-		catch (IOException e) {
-			e.printStackTrace();
-		}
+                if (partes.length > 1) {
+                    String[] pesos = partes[1].split(",");
+                    int pesoAresta = Integer.parseInt(pesos[0]);
 
-		// Retornando os vertices
-		return g.getVertices();
+                    v1.setArestas(g, v2, pesoAresta);
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Não encontrou o arquivo");
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-	}
-
+        return g;
+    }
 	public static void generator() throws IOException {
 		for (int i = 1; i <= 5; i++) {
 			Long timer = System.currentTimeMillis();
@@ -93,7 +74,7 @@ public class Socorro {
 				Vertice u = k.encontrarVertice("v" + j);
 				for (int j2 = j + 1; j2 < n; j2++) {
 					Vertice w = k.encontrarVertice("v" + j2);
-					u.setVizinhos(w, 1);
+					u.setArestas(k, w, 1);
 				}
 			}
 			h = arvure(k, n, br);
@@ -114,8 +95,8 @@ public class Socorro {
 					u = pegaGrau.get(ale1);
 					w = pegaGrau.get(ale2);
 				}
-				while (u.getVizinhos(w) == -1) {
-					u.setVizinhos(w, peso);
+				while (u.getarestas(w) == -1) {
+					u.setArestas(h, w, peso);
 					j++;
 					if (u.getGrau() == n - 1) {
 						pegaGrau.remove(u);
@@ -151,7 +132,7 @@ public class Socorro {
 				Vertice y = new Vertice();
 				u.setDescricao(a.get(v).getDescricao());
 				y.setDescricao(a.get(w).getDescricao());
-				u.setVizinhos(y, aleat.nextInt(1, 500));
+				u.setArestas(k, y, aleat.nextInt(1, 500));
 
 				if (v < w) {
 					b.add(y);
@@ -164,15 +145,15 @@ public class Socorro {
 					b.add(y);
 					a.remove(w);
 				}
-				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getVizinhos(y)) + "\n");
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getarestas(y)) + "\n");
 			} else {
 				w = aleat.nextInt(b.size());
 				v = aleat.nextInt(a.size());
 				Vertice u = new Vertice(), y = new Vertice();
 				u.setDescricao(a.get(v).getDescricao());
 				y = b.get(w);
-				u.setVizinhos(y, aleat.nextInt(1, 500));
-				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getVizinhos(y)) + "\n");
+				u.setArestas(k, y, aleat.nextInt(1, 500));
+				br.write(u.getDescricao() + "," + y.getDescricao() + "/" + Integer.toString(u.getarestas(y)) + "\n");
 				b.add(u);
 				a.remove(v);
 			}
@@ -184,6 +165,134 @@ public class Socorro {
 		return g;
 	}
 
+	public static void rodarDijkstra() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			int n = (int) Math.pow(5, i);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+			File f = new File("src/ResultadoDjikstra.txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+			br.write("Djikstra com quantidade de vertice: " + n + "\n");
+			br.close();
+			for (int j = 0; j < 5; j++) {
+				Grafo g = new Grafo();
+				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+				g=lerGrafo("src/Grafo" + n + ".txt", intervalo);
+				Vertice i1 = new Vertice();
+				i1 = g.encontrarVertice("v0");
+				Dijstra.encontrarMenorCaminhoDijkstra(g, i1, intervalo);
+			}
+			br = new BufferedWriter(new FileWriter(f, true));
+			br.write("\n");
+			br.close();
+		}
+	}
+
+	public static void rodarBellmanFord() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			int n = (int) Math.pow(5, i);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+			File f = new File("src/ResultadoBellmanFord.txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+			br.write("\tCom quantidade de Vertice: " + n + "\n");
+			br.close();
+			for (int j = 0; j < 5; j++) {
+				Grafo g = new Grafo();
+				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				File p = new File("src/SaidaBellmanFord" + n + ".txt");
+					BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("\n Intervalo: "+intervalo+"\n");
+					bw.close();
+				Vertice i1 = new Vertice();
+				i1 = g.encontrarVertice("v0");
+				int[] result = BellmanFord.encontrar(g, i1, intervalo);
+				for (int k = 0; k < result.length; k++) {
+					bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("Antecessores: "+printaPai(k, g)+"\nVertice: v" + k + " Com o a distancia: "
+							+ result[k]+"\n");
+					bw.close();
+				}
+			}
+			br = new BufferedWriter(new FileWriter(f, true));
+			br.write("\n");
+			br.close();
+		}
+	}
+
+	private static String printaPai(int k,Grafo g) {
+		k=g.encontrarVertice("v"+k).getPai();
+		if (k==0) {
+			return "v0 ";
+		}else{
+			int b=k;
+			String a=printaPai(k, g)+" -> v"+b;
+			return a;
+		}
+	}
+	public static void rodarFloydWarshall() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			int n = (int) Math.pow(5, i);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+			File f = new File("src/ResultadoFloyd.txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+			br.write("Floyd com quantidade de vertice= " + n + "\n");
+			br.close();
+			for (int j = 0; j < 5; j++) {
+				Grafo g = new Grafo();
+				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				Vertice i1 = new Vertice();
+				i1 = g.encontrarVertice("v0");
+				Floyd.encontrar(g, i1, intervalo);
+			}
+			br = new BufferedWriter(new FileWriter(f, true));
+			br.write("\n");
+			br.close();
+		}
+	}
+
+	public static void rodarOPF() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			int n = (int) Math.pow(5, i);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+			File f = new File("src/ResultadoOPF.txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+			br.write("OPF com quantidade de vertice= " + n + "\n");
+			br.close();
+			for (int j = 0; j < 5; j++) {
+				Grafo g = new Grafo();
+				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				Vertice i1 = new Vertice();
+				i1 = g.encontrarVertice("v0");
+				OPF.encontrar(g, i1, intervalo);
+			}
+			br = new BufferedWriter(new FileWriter(f, true));
+			br.write("\n");
+			br.close();
+		}
+	}
+
+	public static void rodarJohnson() throws IOException {
+		for (int i = 1; i <= 5; i++) {
+			int n = (int) Math.pow(5, i);
+			int limiteInferior = n - 1;
+			int limiteSuperior = (n * (n - 1)) / 2;
+			for (int j = 0; j < 5; j++) {
+				Grafo g = new Grafo();
+				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
+				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				Vertice i1 = new Vertice();
+				i1 = g.encontrarVertice("v0");
+				Jhonson.encontrar(g, i1, intervalo);
+			}
+		}
+	}
+
 	public static void main(String args[]) throws IOException {
 		int input = -1;
 		Scanner a = new Scanner(System.in);
@@ -193,7 +302,8 @@ public class Socorro {
 							+ "\tDigite 1 : para gerar grafo\n"
 							+ "\tDigite 2 : para rodar djikstra\n" + "\tDigite 3 : para rodar BellmanFord\n"
 							+ "\tDigite 4 : para rodar Floyd-Warshall\n" + "\tDigite 5 : para rodar OPF\n"
-							+ "\tDigite 6 : para rodar Johnson\n" + "\tOpção escolhida : ");
+							+ "\tDigite 6 : para rodar Johnson\n" + "\tDigite 7 : para rodar todos\n"
+							+ "\tOpção escolhida : ");
 			input = a.nextInt();
 			switch (input) {
 				case 1:
@@ -205,79 +315,26 @@ public class Socorro {
 
 					break;
 				case 2:
-					for (int i = 1; i <= 5; i++) {
-						int n = (int) Math.pow(5, i);
-						int limiteInferior = n - 1;
-						int limiteSuperior = (n * (n - 1)) / 2;
-						for (int j = 0; j < 5; j++) {
-							Grafo g = new Grafo();
-							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
-							Vertice i1 = new Vertice();
-							i1 = g.encontrarVertice("v0");
-							Dijstra.encontrarMenorCaminhoDijkstra(g, i1, intervalo);
-						}
-					}
-					//break;
+					rodarDijkstra();
+					break;
 				case 3:
-					for (int i = 1; i <= 5; i++) {
-						int n = (int) Math.pow(5, i);
-						int limiteInferior = n - 1;
-						int limiteSuperior = (n * (n - 1)) / 2;
-						for (int j = 0; j < 5; j++) {
-							Grafo g = new Grafo();
-							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
-							Vertice i1 = new Vertice();
-							i1 = g.encontrarVertice("v0");
-							BellmanFord.encontrar(g, i1, intervalo);
-						}
-					}
-					//break;
+					rodarBellmanFord();
+					break;
 				case 4:
-				for (int i = 1; i <= 5; i++) {
-						int n = (int) Math.pow(5, i);
-						int limiteInferior = n - 1;
-						int limiteSuperior = (n * (n - 1)) / 2;
-						for (int j = 0; j < 5; j++) {
-							Grafo g = new Grafo();
-							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
-							Vertice i1 = new Vertice();
-							i1 = g.encontrarVertice("v0");
-							Floyd.encontrar(g, i1, intervalo);
-						}
-					}
-					//break;
+					rodarFloydWarshall();
+					break;
 				case 5:
-				for (int i = 1; i <= 5; i++) {
-						int n = (int) Math.pow(5, i);
-						int limiteInferior = n - 1;
-						int limiteSuperior = (n * (n - 1)) / 2;
-						for (int j = 0; j < 5; j++) {
-							Grafo g = new Grafo();
-							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
-							Vertice i1 = new Vertice();
-							i1 = g.encontrarVertice("v0");
-							OPF.encontrar(g, i1, intervalo);
-						}
-					}
+					rodarOPF();
 					break;
 				case 6:
-				for (int i = 1; i <= 5; i++) {
-						int n = (int) Math.pow(5, i);
-						int limiteInferior = n - 1;
-						int limiteSuperior = (n * (n - 1)) / 2;
-						for (int j = 0; j < 5; j++) {
-							Grafo g = new Grafo();
-							int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-							g.setVertices(lerGrafo("src/Grafo" + n + ".txt", intervalo));
-							Vertice i1 = new Vertice();
-							i1 = g.encontrarVertice("v0");
-							Jhonson.encontrar(g, i1, intervalo);
-						}
-					}
+					rodarJohnson();
+					break;
+				case 7:
+					rodarDijkstra();
+					rodarBellmanFord();
+					rodarFloydWarshall();
+					rodarOPF();
+					rodarJohnson();
 					break;
 				default:
 					break;

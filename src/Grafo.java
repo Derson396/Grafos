@@ -4,9 +4,16 @@ import java.util.*;
 public class Grafo {
 
     private List<Vertice> grafo = new ArrayList<Vertice>();
+    public List<Aresta> arestas=new ArrayList<>();
+    public List<Aresta> getArestas() {
+        return arestas;
+    }
+
+    public void setArestas(List<Aresta> arestas) {
+        this.arestas = arestas;
+    }
 
     public void setVertices(List<Vertice> vertices) {
-
         this.grafo.addAll(vertices);
     }
 

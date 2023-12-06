@@ -18,7 +18,7 @@ public class Jhonson {
         }
         Vertice aux = new Vertice();
         aux.setDescricao("v?");
-        aux.setVizinhos(inicial, 0);
+        aux.setArestas(g,inicial, 0);
         g.adicionarVertice(aux);
         List<Vertice> bellminha = bellminhaFord(g, aux);
         // grego aq
@@ -55,9 +55,9 @@ public class Jhonson {
         for (int i = 0; i < g.getVertices().size() - 1; i++) {
             for (int j = 0; j < g.getVertices().size(); j++) {
                 Vertice atual = g.getVertices().get(j);
-                for (int k = 0; k < atual.getVizinhos().size(); k++) {
-                    Parentesco aux = atual.getVizinhos().get(k);
-                    Vertice vizinho = g.encontrarVertice(aux.getVizinho());
+                for (int k = 0; k < atual.getarestas().size(); k++) {
+                    Aresta aux = atual.getarestas().get(k);
+                    Vertice vizinho = aux.getV();
 
                     if (atual.getDistancia() + aux.getPeso() < vizinho.getDistancia()) {
                         vizinho.setDistancia(atual.getDistancia() + aux.getPeso());
@@ -70,7 +70,7 @@ public class Jhonson {
             Vertice u = new Vertice(), v = g.getVertices().get(i);
             u.setDescricao(v.getDescricao());
             u.setDistancia(v.getDistancia());
-            u.setVizinhos(v.getVizinhos());
+            u.setarestas(v.getarestas());
             h.adicionarVertice(u);
         }
         return h.getVertices();

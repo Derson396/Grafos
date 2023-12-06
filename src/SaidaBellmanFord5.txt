@@ -1,0 +1,60 @@
+
+ Intervalo: 4
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0 
+Vertice: v1 Com o a distancia: 221
+Antecessores: v0  -> v1 -> v4
+Vertice: v2 Com o a distancia: 957
+Antecessores: v0  -> v1
+Vertice: v3 Com o a distancia: 336
+Antecessores: v0  -> v1
+Vertice: v4 Com o a distancia: 567
+
+ Intervalo: 5
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0 
+Vertice: v1 Com o a distancia: 221
+Antecessores: v0  -> v1 -> v4
+Vertice: v2 Com o a distancia: 957
+Antecessores: v0  -> v1
+Vertice: v3 Com o a distancia: 336
+Antecessores: v0  -> v1
+Vertice: v4 Com o a distancia: 567
+
+ Intervalo: 7
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0 
+Vertice: v1 Com o a distancia: 221
+Antecessores: v0  -> v1
+Vertice: v2 Com o a distancia: 482
+Antecessores: v0  -> v1
+Vertice: v3 Com o a distancia: 336
+Antecessores: v0  -> v1
+Vertice: v4 Com o a distancia: 567
+
+ Intervalo: 8
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0 
+Vertice: v1 Com o a distancia: 221
+Antecessores: v0 
+Vertice: v2 Com o a distancia: 448
+Antecessores: v0  -> v1
+Vertice: v3 Com o a distancia: 336
+Antecessores: v0  -> v1
+Vertice: v4 Com o a distancia: 567
+
+ Intervalo: 10
+Antecessores: v0 
+Vertice: v0 Com o a distancia: 0
+Antecessores: v0 
+Vertice: v1 Com o a distancia: 221
+Antecessores: v0 
+Vertice: v2 Com o a distancia: 448
+Antecessores: v0  -> v1
+Vertice: v3 Com o a distancia: 336
+Antecessores: v0 
+Vertice: v4 Com o a distancia: 319

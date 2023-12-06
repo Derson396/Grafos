@@ -4,37 +4,51 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.*;
 
 public class BellmanFord {
-    public static List<Vertice> encontrar(Grafo g, Vertice inicial,int intervalo) throws IOException {
-        Long time = System.currentTimeMillis();
-        for (int i = 0; i < g.getVertices().size(); i++) {
-            if (g.getVertices().get(i).getDescricao().equals(inicial.getDescricao())) {
-                g.getVertices().get(i).setDistancia(0);
-            } else {
-                g.getVertices().get(i).setDistancia(Integer.MAX_VALUE);
-            }
+    public static int[] encontrar(Grafo g, Vertice inicial, int intervalo) throws IOException {
+        Instant start = Instant.now();
+        List<Vertice> vertices=g.getVertices();
+        List<Aresta> arestas=g.getArestas();
+        int[] dist = new int[vertices.size()];
+        int numVertices=vertices.size();
+        for (int i = 0; i < dist.length; i++) {
+            dist[i]=Integer.MAX_VALUE;
         }
-        for (int i = 0; i < g.getVertices().size() - 1; i++) {
-            for (int j = 0; j < g.getVertices().size(); j++) {
-                Vertice atual = g.getVertices().get(j);
-                for (int k = 0; k < atual.getVizinhos().size(); k++) {
-                    Parentesco aux=atual.getVizinhos().get(k);
-                    Vertice vizinho=g.encontrarVertice(aux.getVizinho());
-
-                    if (atual.getDistancia()+aux.getPeso()<vizinho.getDistancia()) {
-                        vizinho.setDistancia(atual.getDistancia()+aux.getPeso());
-                    }
+        dist[Integer.parseInt(inicial.getDescricao().substring(1))]=0;
+        for (int i = 1; i < numVertices; i++) {
+            boolean flag=true;
+            for(Aresta aresta:arestas){
+                Vertice w=aresta.getw();
+                Vertice v=aresta.getV();
+                int peso=aresta.getPeso();
+                int wb=Integer.parseInt(w.getDescricao().substring(1));
+                int ve=Integer.parseInt(v.getDescricao().substring(1));
+                if (dist[ve]!=Integer.MAX_VALUE&&dist[wb]>dist[ve]+peso) {
+                    dist[wb]=dist[ve]+peso;
+                    flag=false;
+                    w.setPai(ve);
+                    w.setDistancia(dist[wb]);
                 }
             }
+            if (flag) {
+                break;
+            }
         }
-        Long tempo=(System.currentTimeMillis() - time);
+        Duration tempo = Duration.between(start, Instant.now());
         File f = new File("src/ResultadoBellmanFord.txt");
-			BufferedWriter br = new BufferedWriter(new FileWriter(f,true));
-            br.write("BellmanFord com quantidade de vertice= " + g.getVertices().size() + " e quantidade de aresta= "+intervalo+" \t\tDemorou cerca de: " + tempo + " ms, " + ((tempo / 60000) % 60)
-					+ " minutos, " + ((tempo / 1000) % 60) + " segundos\n");
-                    br.close();
-        return g.getVertices();
+        BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+        long millis = tempo.toMillis();
+        long seconds = millis / 1000;
+        long minutes = seconds / 60;
+        long remainingSeconds = seconds % 60;
+        br.write("\t Com quantidade de aresta= "
+                + intervalo + "\t\tDemorou cerca de: " + millis + " ms, "
+                + minutes + " minutos, " + remainingSeconds + " segundos\n");
+        br.close();
+        return dist;//retornar o vetor ou a list vertices seria o msm resultado porem estou retornando o vetor so pra saida ficar organizada:)
     }
 }
