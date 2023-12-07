@@ -25,7 +25,7 @@ public class Dijstra {
             vertices.get(i).setDistancia(Integer.MAX_VALUE);
             naoVisitados.add(vertices.get(i));
         }
-        vertices.get(0).setDistancia(0);
+        v1.setDistancia(0);
         Collections.sort(naoVisitados);
 
         while (!naoVisitados.isEmpty()) {
@@ -35,7 +35,7 @@ public class Dijstra {
                     if (aux.getw().getDistancia() > (atual.getDistancia() + aux.getPeso())) {
                         aux.getw().setDistancia(atual.getDistancia()
                                 + aux.getPeso());
-                        aux.getw().setPai(Integer.parseInt(atual.getDescricao().substring(1)));
+                        aux.getw().setPai(atual.getDescricao());
                     }
                 }
 

@@ -9,29 +9,25 @@ import java.time.Instant;
 import java.util.*;
 
 public class BellmanFord {
-    public static int[] encontrar(Grafo g, Vertice inicial, int intervalo) throws IOException {
+    public static List<Vertice> encontrar(Grafo g, Vertice inicial, int intervalo) throws IOException {
         Instant start = Instant.now();
         List<Vertice> vertices=g.getVertices();
         List<Aresta> arestas=g.getArestas();
-        int[] dist = new int[vertices.size()];
         int numVertices=vertices.size();
-        for (int i = 0; i < dist.length; i++) {
-            dist[i]=Integer.MAX_VALUE;
+        for (int i = 0; i < numVertices; i++) {
+            vertices.get(i).setDistancia(Integer.MAX_VALUE);
         }
-        dist[Integer.parseInt(inicial.getDescricao().substring(1))]=0;
+        inicial.setDistancia(0);
         for (int i = 1; i < numVertices; i++) {
             boolean flag=true;
             for(Aresta aresta:arestas){
                 Vertice w=aresta.getw();
                 Vertice v=aresta.getV();
                 int peso=aresta.getPeso();
-                int wb=Integer.parseInt(w.getDescricao().substring(1));
-                int ve=Integer.parseInt(v.getDescricao().substring(1));
-                if (dist[ve]!=Integer.MAX_VALUE&&dist[wb]>dist[ve]+peso) {
-                    dist[wb]=dist[ve]+peso;
+                if (v.getDistancia()!=Integer.MAX_VALUE&&w.getDistancia()>v.getDistancia()+peso) {
+                    w.setDistancia(v.getDistancia()+peso);
                     flag=false;
-                    w.setPai(ve);
-                    w.setDistancia(dist[wb]);
+                    w.setPai(v.getDescricao());
                 }
             }
             if (flag) {
@@ -49,6 +45,6 @@ public class BellmanFord {
                 + intervalo + "\t\tDemorou cerca de: " + millis + " ms, "
                 + minutes + " minutos, " + remainingSeconds + " segundos\n");
         br.close();
-        return dist;//retornar o vetor ou a list vertices seria o msm resultado porem estou retornando o vetor so pra saida ficar organizada:)
+        return vertices;
     }
 }

@@ -7,13 +7,12 @@ public class Vertice implements Comparable<Vertice> {
     private int distancia, grau = 0;
     private boolean visitado = false;
     public List<Aresta> arestas = new ArrayList<Aresta>();
-    private boolean jaArestado=false;
-    public int pai;
-    public int getPai() {
+    public String pai;
+    public String getPai() {
         return pai;
     }
 
-    public void setPai(int pai) {
+    public void setPai(String pai) {
         this.pai = pai;
     }
 

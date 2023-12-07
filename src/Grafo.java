@@ -46,6 +46,15 @@ public class Grafo {
     }
 
     public void removerVertice(Vertice aux) {
+        Iterator<Aresta> iterator = arestas.iterator();
+        while (iterator.hasNext()) {
+            Aresta aresta = iterator.next();
+            if (aresta.getV().equals(aux) || aresta.getw().equals(aux)) {
+                iterator.remove();
+            }
+        }
+    
+        getVertices().remove(aux);
     }
 
 }

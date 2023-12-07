@@ -11,18 +11,18 @@ import java.util.*;
 
 public class Socorro {
 	public static Grafo lerGrafo(String nomeArquivo, int limite) {
-        Grafo g = new Grafo();
-        File f = new File(nomeArquivo);
+		Grafo g = new Grafo();
+		File f = new File(nomeArquivo);
 
-        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
-            Map<String, Vertice> mapa = new HashMap<>();
+		try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+			Map<String, Vertice> mapa = new HashMap<>();
 
-            String linha;
-            while ((linha = br.readLine()) != null && limite > 0) {
-                limite--;
+			String linha;
+			while ((linha = br.readLine()) != null && limite > 0) {
+				limite--;
 
-                String[] partes = linha.split("/");
-                String[] vertices = partes[0].split(",");
+				String[] partes = linha.split("/");
+				String[] vertices = partes[0].split(",");
 
 				Vertice v1 = mapa.get(vertices[0]);
 				if (v1 == null) {
@@ -30,32 +30,33 @@ public class Socorro {
 					v1.setDescricao(vertices[0]);
 					mapa.put(vertices[0], v1);
 				}
-				
+
 				Vertice v2 = mapa.get(vertices[1]);
 				if (v2 == null) {
 					v2 = new Vertice();
 					v2.setDescricao(vertices[1]);
 					mapa.put(vertices[1], v2);
 				}
-                g.adicionarVertice(v1);
-                g.adicionarVertice(v2);
+				g.adicionarVertice(v1);
+				g.adicionarVertice(v2);
 
-                if (partes.length > 1) {
-                    String[] pesos = partes[1].split(",");
-                    int pesoAresta = Integer.parseInt(pesos[0]);
+				if (partes.length > 1) {
+					String[] pesos = partes[1].split(",");
+					int pesoAresta = Integer.parseInt(pesos[0]);
 
-                    v1.setArestas(g, v2, pesoAresta);
-                }
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Não encontrou o arquivo");
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+					v1.setArestas(g, v2, pesoAresta);
+				}
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("Não encontrou o arquivo");
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        return g;
-    }
+		return g;
+	}
+
 	public static void generator() throws IOException {
 		for (int i = 1; i <= 5; i++) {
 			Long timer = System.currentTimeMillis();
@@ -177,10 +178,20 @@ public class Socorro {
 			for (int j = 0; j < 5; j++) {
 				Grafo g = new Grafo();
 				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-				g=lerGrafo("src/Grafo" + n + ".txt", intervalo);
+				g = lerGrafo("src/Grafo" + n + ".txt", intervalo);
 				Vertice i1 = new Vertice();
 				i1 = g.encontrarVertice("v0");
-				Dijstra.encontrarMenorCaminhoDijkstra(g, i1, intervalo);
+				List<Vertice> result=Dijstra.encontrarMenorCaminhoDijkstra(g, i1, intervalo);
+				File p = new File("src/SaidaDijkstra" + n + ".txt");
+				BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+				bw.write("\n Intervalo: " + intervalo + "\n");
+				bw.close();
+				for (Vertice v : result) {
+					bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("Antecessores: " + printaPai(v, g) + " Com o a distancia: "
+							+ v.getDistancia() + "\n");
+					bw.close();
+				}
 			}
 			br = new BufferedWriter(new FileWriter(f, true));
 			br.write("\n");
@@ -200,18 +211,18 @@ public class Socorro {
 			for (int j = 0; j < 5; j++) {
 				Grafo g = new Grafo();
 				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				g = (lerGrafo("src/Grafo" + n + ".txt", intervalo));
 				File p = new File("src/SaidaBellmanFord" + n + ".txt");
-					BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
-					bw.write("\n Intervalo: "+intervalo+"\n");
-					bw.close();
+				BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+				bw.write("\n Intervalo: " + intervalo + "\n");
+				bw.close();
 				Vertice i1 = new Vertice();
 				i1 = g.encontrarVertice("v0");
-				int[] result = BellmanFord.encontrar(g, i1, intervalo);
-				for (int k = 0; k < result.length; k++) {
+				List<Vertice> result = BellmanFord.encontrar(g, i1, intervalo);
+				for (Vertice v : result) {
 					bw = new BufferedWriter(new FileWriter(p, true));
-					bw.write("Antecessores: "+printaPai(k, g)+"\nVertice: v" + k + " Com o a distancia: "
-							+ result[k]+"\n");
+					bw.write("Antecessores: " + printaPai(v, g) + " Com o a distancia: "
+							+ v.getDistancia() + "\n");
 					bw.close();
 				}
 			}
@@ -221,16 +232,15 @@ public class Socorro {
 		}
 	}
 
-	private static String printaPai(int k,Grafo g) {
-		k=g.encontrarVertice("v"+k).getPai();
-		if (k==0) {
+	private static String printaPai(Vertice v, Grafo g) {
+		if (v.getDescricao().equals("v0")) {
 			return "v0 ";
-		}else{
-			int b=k;
-			String a=printaPai(k, g)+" -> v"+b;
+		} else {
+			String a = printaPai(g.encontrarVertice(v.getPai()), g) + " -> " + v.getDescricao();
 			return a;
 		}
 	}
+
 	public static void rodarFloydWarshall() throws IOException {
 		for (int i = 1; i <= 5; i++) {
 			int n = (int) Math.pow(5, i);
@@ -243,10 +253,20 @@ public class Socorro {
 			for (int j = 0; j < 5; j++) {
 				Grafo g = new Grafo();
 				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				g = (lerGrafo("src/Grafo" + n + ".txt", intervalo));
 				Vertice i1 = new Vertice();
 				i1 = g.encontrarVertice("v0");
-				Floyd.encontrar(g, i1, intervalo);
+				List<Vertice> result=Floyd.encontrar(g, i1, intervalo);
+				File p = new File("src/SaidaFloyd" + n + ".txt");
+				BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+				bw.write("\n Intervalo: " + intervalo + "\n");
+				bw.close();
+				for (Vertice v : result) {
+					bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("Antecessores: " + v.getDescricao() + " Com o a distancia: "
+							+ v.getDistancia() + "\n");
+					bw.close();
+				}
 			}
 			br = new BufferedWriter(new FileWriter(f, true));
 			br.write("\n");
@@ -266,10 +286,20 @@ public class Socorro {
 			for (int j = 0; j < 5; j++) {
 				Grafo g = new Grafo();
 				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				g = (lerGrafo("src/Grafo" + n + ".txt", intervalo));
 				Vertice i1 = new Vertice();
 				i1 = g.encontrarVertice("v0");
-				OPF.encontrar(g, i1, intervalo);
+				List<Vertice> result=OPF.encontrar(g, i1, intervalo);
+				File p = new File("src/SaidaOPF" + n + ".txt");
+				BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+				bw.write("\n Intervalo: " + intervalo + "\n");
+				bw.close();
+				for (Vertice v : result) {
+					bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("Antecessores: " + printaPai(v, g) + " Com o a distancia: "
+							+ v.getDistancia() + "\n");
+					bw.close();
+				}
 			}
 			br = new BufferedWriter(new FileWriter(f, true));
 			br.write("\n");
@@ -282,13 +312,27 @@ public class Socorro {
 			int n = (int) Math.pow(5, i);
 			int limiteInferior = n - 1;
 			int limiteSuperior = (n * (n - 1)) / 2;
+			File f = new File("src/ResultadoJhonson.txt");
+			BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
+			br.write("Jhonson com quantidade de vertice= " + n + "\n");
+			br.close();
 			for (int j = 0; j < 5; j++) {
 				Grafo g = new Grafo();
 				int intervalo = limiteInferior + (j * (limiteSuperior - limiteInferior) / 4);
-				g=(lerGrafo("src/Grafo" + n + ".txt", intervalo));
+				g = (lerGrafo("src/Grafo" + n + ".txt", intervalo));
 				Vertice i1 = new Vertice();
 				i1 = g.encontrarVertice("v0");
-				Jhonson.encontrar(g, i1, intervalo);
+				List<Vertice> result=Jhonson.encontrar(g, i1, intervalo);
+				File p = new File("src/SaidaJhonson" + n + ".txt");
+				BufferedWriter bw = new BufferedWriter(new FileWriter(p, true));
+				bw.write("\n Intervalo: " + intervalo + "\n");
+				bw.close();
+				for (Vertice v : result) {
+					bw = new BufferedWriter(new FileWriter(p, true));
+					bw.write("Antecessores: " + printaPai(v, g) + " Com o a distancia: "
+							+ v.getDistancia() + "\n");
+					bw.close();
+				}
 			}
 		}
 	}
