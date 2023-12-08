@@ -14,18 +14,18 @@ public class Dijstra {
     Vertice vizinho = new Vertice();
     List<Vertice> naoVisitados = new ArrayList<Vertice>();
 
-    public static List<Vertice> encontrarMenorCaminhoDijkstra(Grafo grafo, Vertice v1, int intervalo)
+    public static List<Vertice> encontrar(Grafo g, Vertice inicial, int intervalo)
             throws IOException {
         Instant start = Instant.now();
         List<Vertice> menorCaminho = new ArrayList<Vertice>();
         Vertice atual = new Vertice();
         List<Vertice> naoVisitados = new ArrayList<Vertice>();
-        List<Vertice> vertices = grafo.getVertices();
+        List<Vertice> vertices = g.getVertices();
         for (int i = 0; i < vertices.size(); i++) {
             vertices.get(i).setDistancia(Integer.MAX_VALUE);
             naoVisitados.add(vertices.get(i));
         }
-        v1.setDistancia(0);
+        inicial.setDistancia(0);
         Collections.sort(naoVisitados);
 
         while (!naoVisitados.isEmpty()) {
@@ -35,7 +35,6 @@ public class Dijstra {
                     if (aux.getw().getDistancia() > (atual.getDistancia() + aux.getPeso())) {
                         aux.getw().setDistancia(atual.getDistancia()
                                 + aux.getPeso());
-                        aux.getw().setPai(atual.getDescricao());
                     }
                 }
 

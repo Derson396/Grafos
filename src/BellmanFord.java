@@ -27,7 +27,6 @@ public class BellmanFord {
                 if (v.getDistancia()!=Integer.MAX_VALUE&&w.getDistancia()>v.getDistancia()+peso) {
                     w.setDistancia(v.getDistancia()+peso);
                     flag=false;
-                    w.setPai(v.getDescricao());
                 }
             }
             if (flag) {
