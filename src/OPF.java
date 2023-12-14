@@ -35,7 +35,7 @@ public class OPF {
                 if (!aux.getw().verificarVisita()) {
                     //Distancia da extremidade da aresta>max(distancia do vertice atual, peso da aresta)
                     if (aux.getw().getDistancia() > Math.max(atual.getDistancia(), aux.getPeso())) {
-                        aux.getw().setDistancia((atual.getDistancia() + aux.getPeso()));
+                        aux.getw().setDistancia(Math.max(atual.getDistancia(), aux.getPeso()));
                     }
                 }
 

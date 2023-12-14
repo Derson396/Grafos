@@ -17,7 +17,6 @@ public class Dijstra {
     public static List<Vertice> encontrar(Grafo g, Vertice inicial, int intervalo)
             throws IOException {
         Instant start = Instant.now();
-        List<Vertice> menorCaminho = new ArrayList<Vertice>();
         Vertice atual = new Vertice();
         List<Vertice> naoVisitados = new ArrayList<Vertice>();
         List<Vertice> vertices = g.getVertices();
@@ -39,7 +38,6 @@ public class Dijstra {
                 }
 
             }
-            menorCaminho.add(atual);
             atual.visitar();
             naoVisitados.remove(atual);
 
@@ -57,6 +55,6 @@ public class Dijstra {
                 + intervalo + "\t\tDemorou cerca de: " + millis + " ms, "
                 + minutes + " minutos, " + remainingSeconds + " segundos\n");
         br.close();
-        return menorCaminho;
+        return vertices;
     }
 }

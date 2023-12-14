@@ -3,33 +3,33 @@
 Vertices: v0 Com o a distancia: 0
 Vertices: v4 Com o a distancia: 33
 Vertices: v3 Com o a distancia: 186
-Vertices: v2 Com o a distancia: 459
-Vertices: v1 Com o a distancia: 676
+Vertices: v2 Com o a distancia: 426
+Vertices: v1 Com o a distancia: 426
 
  Intervalo: 5
 Vertices: v0 Com o a distancia: 0
 Vertices: v4 Com o a distancia: 33
 Vertices: v3 Com o a distancia: 186
-Vertices: v2 Com o a distancia: 459
-Vertices: v1 Com o a distancia: 676
+Vertices: v1 Com o a distancia: 386
+Vertices: v2 Com o a distancia: 386
 
  Intervalo: 7
 Vertices: v0 Com o a distancia: 0
 Vertices: v4 Com o a distancia: 33
 Vertices: v3 Com o a distancia: 186
 Vertices: v1 Com o a distancia: 318
-Vertices: v2 Com o a distancia: 535
+Vertices: v2 Com o a distancia: 318
 
  Intervalo: 8
 Vertices: v0 Com o a distancia: 0
 Vertices: v4 Com o a distancia: 33
 Vertices: v3 Com o a distancia: 186
 Vertices: v1 Com o a distancia: 318
-Vertices: v2 Com o a distancia: 535
+Vertices: v2 Com o a distancia: 318
 
  Intervalo: 10
 Vertices: v0 Com o a distancia: 0
 Vertices: v4 Com o a distancia: 33
+Vertices: v1 Com o a distancia: 167
 Vertices: v3 Com o a distancia: 186
-Vertices: v1 Com o a distancia: 200
-Vertices: v2 Com o a distancia: 417
+Vertices: v2 Com o a distancia: 217

@@ -9,7 +9,8 @@ import java.time.Instant;
 import java.util.*;
 
 public class Jhonson {
-    public static List<Vertice> encontrar(Grafo g, Vertice inicial, int intervalo) throws IOException, CloneNotSupportedException {
+    public static List<Vertice> encontrar(Grafo g, Vertice inicial, int intervalo)
+            throws IOException, CloneNotSupportedException {
         Instant start = Instant.now();
         List<Vertice> vertices = g.getVertices();
         for (Vertice v : vertices) {
@@ -24,14 +25,15 @@ public class Jhonson {
         }
         List<Vertice> bellminha = bellminhaFord(g, aux);
         g.removerVertice(aux);
-        atualizarArestas(g, bellminha);List<Vertice> dijkstrin;
-        
-        dijkstrin=dijkstrinha(g, inicial);
+        atualizarArestas(g, bellminha);
+        List<Vertice> dijkstrin;
+
+        dijkstrin = dijkstrinha(g, inicial);
         for (Vertice vertice : vertices) {
-                vertice.setDistancia(dijkstrin.get(dijkstrin.indexOf(vertice)).getDistancia()
-                        - bellminha.get(bellminha.indexOf(inicial)).getDistancia()
-                        + bellminha.get(bellminha.indexOf(vertice)).getDistancia());
-            }
+            vertice.setDistancia(dijkstrin.get(dijkstrin.indexOf(vertice)).getDistancia()
+                    - bellminha.get(bellminha.indexOf(inicial)).getDistancia()
+                    + bellminha.get(bellminha.indexOf(vertice)).getDistancia());
+        }
         Duration tempo = Duration.between(start, Instant.now());
         File f = new File("src/ResultadoJhonson.txt");
         long millis = tempo.toMillis();
@@ -40,8 +42,8 @@ public class Jhonson {
         long remainingSeconds = seconds % 60;
         BufferedWriter br = new BufferedWriter(new FileWriter(f, true));
         br.write("\t Com quantidade de aresta= "
-        + intervalo + "\t\tDemorou cerca de: " + millis + " ms, "
-        + minutes + " minutos, " + remainingSeconds + " segundos\n");
+                + intervalo + "\t\tDemorou cerca de: " + millis + " ms, "
+                + minutes + " minutos, " + remainingSeconds + " segundos\n");
         br.close();
         return g.getVertices();
     }
@@ -55,14 +57,9 @@ public class Jhonson {
     }
 
     private static List<Vertice> dijkstrinha(Grafo g, Vertice inicial) {
-        List<Vertice> menorCaminho = new ArrayList<Vertice>();
         Vertice atual = new Vertice();
         List<Vertice> naoVisitados = new ArrayList<Vertice>();
         List<Vertice> vertices = g.getVertices();
-        for (int i = 0; i < vertices.size(); i++) {
-            vertices.get(i).setDistancia(Integer.MAX_VALUE);
-            naoVisitados.add(vertices.get(i));
-        }
         inicial.setDistancia(0);
         Collections.sort(naoVisitados);
 
@@ -77,23 +74,21 @@ public class Jhonson {
                 }
 
             }
-            menorCaminho.add(atual);
             atual.visitar();
             naoVisitados.remove(atual);
 
             Collections.sort(naoVisitados);
 
         }
-        return menorCaminho;
+        return vertices;
     }
 
     private static List<Vertice> bellminhaFord(Grafo g, Vertice inicial) throws CloneNotSupportedException {
-        List<Vertice> vertices = g.getVertices();
-        List<Aresta> arestas = g.getArestas();
+        Grafo h = new Grafo();
+        h = g.clone();
+        List<Vertice> vertices = h.getVertices();
+        List<Aresta> arestas = h.getArestas();
         int numVertices = vertices.size();
-        for (int i = 0; i < numVertices; i++) {
-            vertices.get(i).setDistancia(Integer.MAX_VALUE);
-        }
         inicial.setDistancia(0);
         for (int i = 1; i < numVertices; i++) {
             boolean flag = true;
@@ -110,8 +105,7 @@ public class Jhonson {
                 break;
             }
         }
-        Grafo h = new Grafo();
-        h=g.clone();
+        
         return h.getVertices();
     }
 }

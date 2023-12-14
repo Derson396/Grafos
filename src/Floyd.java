@@ -19,6 +19,7 @@ public class Floyd {
             for (int j = 0; j < numVertices; j++) {
                 distancias[i][j] = matrizAdj[i][j];
             }
+            distancias[i][i]=0;
         }
 
         // Algoritmo de Floyd-Warshall
